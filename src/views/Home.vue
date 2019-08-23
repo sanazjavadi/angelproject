@@ -1,49 +1,19 @@
 <template>
   <div class="container">
-     
-<!-- header menu -->
+<menuu />
      <div class="row">
-     	<div class="col-12">
-     		<headermenu />
+     	<div class="col-4 offset-md-4">
+     		<h3>some text here as hero </h3>
+         <h2>some text here as hero </h2>
      	</div>
      </div>
-
-
-<!-- sanaz jooonam bia ghesmat haye dige ro inja bezar -->
-<!-- masalan hero ro -->
-<!-- harchizi ro khasti bezari , tag haye row ya col ro mitoni inja bezari -->
-<!-- daghighan mesle hamin mesal <headermenu /> ke bala dorost kardam -->
-
-<!-- 
-
-<div class="row">
-  <div class="col-12" >
-
-   // your component, for example <Hero /> placed here sanaz jooonam
-   <component />
-
-  </div>
-</div>
-
-
-
- -->
-
-
-
-
   </div>
 </template>
 
 <script>
-
-	import headermenu from './../components/headermenu';
-
-
+import menuu from './menuu'
 export default {
-  name: 'home',
-  components: {
-  	headermenu,
-  }
+  components:{menuu}
 }
+
 </script>
