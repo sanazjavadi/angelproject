@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-    <h1> About Page </h1>
+    <h1> menu </h1>
+
+    <!-- <Logo> && <Links> && ... component placed here    -->
     
   </div>
 </template>
