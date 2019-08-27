@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import About from './views/About.vue'
-import signin from './views/signin'
+// import signin from './views/signin'
 import signup from './views/signup'
 
 
@@ -25,11 +25,11 @@ export default new Router({
               name: 'about',
               component: About,
        },
-       {
-              path:'/signin',
-              name:'signin',
-              component:signin,
-       },
+       // {
+       //        path:'/signin',
+       //        name:'signin',
+       //        component:signin,
+       // },
        {
               path:'signup',
               name:'signup',

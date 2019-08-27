@@ -1,31 +1,17 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#"><logo/></a>
+     
+        <nav  class="navbar navbar-expand-lg navbar-light bg-light" >
+  <a class="navbar-brand" href="#"> <logo/></a>
  
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">about</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">dreams</a>
-      </li>
-       <li class="nav-item">
-        <a class="nav-link" href="#">gallery</a>
-      </li>
-             <li class="nav-item">
-        <a class="nav-link" href="#">news</a>
-      </li>
-                   <li class="nav-item">
-        <a class="nav-link" href="#">contact</a>
+      <li v-for="i in links" class="nav-item active">
+        <router-link class="nav-link" :to="i.src"> {{i.title}}</router-link>
       </li>
     </ul>
   </div>
-   <router-link to="/signin"> <signin/></router-link>
+   <router-link to="/signin"> <Button  title="sign in" />  </router-link>
 
 </nav>
 
@@ -33,13 +19,20 @@
 </template>
 <script>
 import logo from './logo'
-import signin from './signin'
+import Button from './../components/Button'
 export default {
-    components:{logo,signin}
+    components:{logo,Button},
+    props: ['links'],
+    data: function () {
+      return {
+        bool: false,
+      }
+    }
 }
 </script>
 <style scoped>
 #navbarNav{
   padding-left:20%;
 }
+
 </style>

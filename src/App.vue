@@ -6,9 +6,9 @@
     </div>
     <router-view/>
   </div> -->
-  <div class="container">
-<Home />
 
+  <div class="container">
+<router-view/>
     </div>
 </template>
 <script>
