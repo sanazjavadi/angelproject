@@ -6,7 +6,7 @@
  
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
-      <li v-for="i in links" class="nav-item active">
+      <li :key="i.title" v-for="i in links" :class="{activeitem: i.title == active}" @mouseover="clickme(i)">
         <router-link class="nav-link" :to="i.src"> {{i.title}}</router-link>
       </li>
     </ul>
@@ -26,6 +26,13 @@ export default {
     data: function () {
       return {
         bool: false,
+        active:'home',
+      }
+    }
+    ,
+    methods:{
+      clickme (i){
+        this.active = i.title
       }
     }
 }
@@ -34,5 +41,10 @@ export default {
 #navbarNav{
   padding-left:20%;
 }
+.activeitem{
+  background-color:red;
+}
+
+
 
 </style>

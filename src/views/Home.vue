@@ -9,29 +9,58 @@
          <heroimg/>
      	</div>
      </div>
+     <div class="row">
+      
+       <div class="col-4 offset-md-5">
+          <router-link to="/register">
+          <registerr/>
+       </router-link>
+       </div>
+      
+       </div>
   </div>
 </template>
 
 <script>
 import heroimg from './img'
 import menuu from './menuu'
+import registerr from './registerr'
 export default {
-  components:{menuu,heroimg},
+  components:{menuu,heroimg,registerr},
   data: function() {
     return {
       myLinks: [
     {
-      title: 'Home',
-      src: '/'
+      title: 'home',
+      src: '/',
+      active: false,
     },
     {
-      title: 'Abbout',
-      src: '/about'
+      title: 'about',
+      src: '/about',
+      active: true,
     },
     {
-      title: 'Sign In',
-      src: '/signin'
-    }
+      title: 'dreams',
+      src: '/dreams',
+      active: false,
+    },
+      {
+      title: 'gallery',
+      src: '/gallery',
+      active: false,
+    },
+      {
+      title: 'news',
+      src: '/news',
+      active: false,
+    },
+      {
+      title: 'contact',
+      src: '/contact',
+      active: false,
+    },
+
   ]
     }
   }

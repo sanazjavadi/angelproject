@@ -4,6 +4,8 @@ import Home from './views/Home.vue'
 import About from './views/About.vue'
 // import signin from './views/signin'
 import signup from './views/signup'
+import Admin from './views/admin.vue'
+import registerr from './views/registerr.vue'
 
 
 Vue.use(Router);
@@ -15,7 +17,11 @@ Vue.use(Router);
 
 export default new Router({
 	routes: [
-	{
+              {
+                     path: '/admin/:id',
+                     component: Admin
+              },
+       {   
        	path: '/',
        	name: 'home',
        	component: Home,
@@ -31,11 +37,18 @@ export default new Router({
        //        component:signin,
        // },
        {
-              path:'signup',
+              path:'/signup',
               name:'signup',
               component:signup,
        }
-	] 
+       ,
+       {
+              path:'/register',
+              name:'register',
+              component:signup,
+       }
+       ] 
+       
 })
 
 
