@@ -1,4 +1,4 @@
-# finalangel
+# Angel
 
 ## Project setup
 ```
