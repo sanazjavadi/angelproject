@@ -5,6 +5,7 @@ import contact from './views/contact'
 import gallery from './views/gallery'
 import signin from './views/signin'
 import forgotpass from './views/forgotpass'
+import dashboard from './dashboard/dashboard'
 
 
 
@@ -36,6 +37,10 @@ component:Home
     {
         path:'/forgotpass',
         component:forgotpass
+    },
+    {
+        path:'/dashboard',
+        component:dashboard
     }
 
 

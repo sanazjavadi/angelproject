@@ -59,7 +59,7 @@ export default {
     width: 450px;
     max-width: 100%;
     min-height: 550px;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 form {
     background-color: #ffffff;
