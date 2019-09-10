@@ -29,7 +29,7 @@
         <span>or use your account</span>
         <input type="email" placeholder="Email" v-model="signinemail"/>
         <input type="password" placeholder="Password" v-model="signinpass" />
-        <a href="#">Forgot your password?</a>
+       <router-link to="/forgotpass">Forgot Your Password?</router-link>
         <button @click="signin">Sign In</button>
     </form>
 </div>

@@ -4,6 +4,7 @@ import Home from './views/Home'
 import contact from './views/contact'
 import gallery from './views/gallery'
 import signin from './views/signin'
+import forgotpass from './views/forgotpass'
 
 
 
@@ -31,6 +32,10 @@ component:Home
 },
      {path:'/signin',
      component:signin
+    },
+    {
+        path:'/forgotpass',
+        component:forgotpass
     }
 
 
