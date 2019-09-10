@@ -39,7 +39,7 @@ component:Home
         component:forgotpass
     },
     {
-        path:'/dashboard',
+        path:'/:userid/dashboard',
         component:dashboard
     }
 

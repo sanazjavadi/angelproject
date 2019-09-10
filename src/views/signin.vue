@@ -30,7 +30,10 @@
         <input type="email" placeholder="Email" v-model="signinemail"/>
         <input type="password" placeholder="Password" v-model="signinpass" />
        <router-link to="/forgotpass">Forgot Your Password?</router-link>
+       <router-link :to="`/${1+2}/dashboard`">
         <button @click="signin">Sign In</button>
+        </router-link>
+       
     </form>
 </div>
     
