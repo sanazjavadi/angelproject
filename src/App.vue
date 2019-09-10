@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <master/>
+    <master />
     <div class="main-container container">
     <router-view />
     </div>
@@ -19,7 +19,7 @@ export default {
 </script>
 
 <style>
-.main-container {
+/* .main-container {
   border:9px solid black;
-}
+} */
 </style>

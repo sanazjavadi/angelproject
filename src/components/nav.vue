@@ -8,7 +8,7 @@
               <ul class="navbar-nav mr-auto">
               <li :class="{ navclass : naav.active }"
                v-for="(naav, index) in nav" 
-               @click="activeitem(nav[index])">
+              :key="naav.id" @click="activeitem(nav[index])">
                   <router-link :to="naav.path" class="nav-link">
                       {{naav.name}}
                       <span class="sr-only">(current)</span>
@@ -42,7 +42,7 @@ created() {
       i.active = false;
   });
 
-  this.nav = newState;
+
 
   
 

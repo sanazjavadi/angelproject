@@ -5,6 +5,8 @@ import register from './views/register'
 import contact from './views/contact'
 import gallery from './views/gallery'
 
+
+
 Vue.use(VueRouter)
 
 
@@ -25,7 +27,11 @@ component:Home
 {
     path:'/gallery',
     component:gallery
-}
+},
+{
+    path:'/dashboard/member/chat',
+    component:gallery
+},
 
   ]
 })

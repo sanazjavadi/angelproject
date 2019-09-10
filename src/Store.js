@@ -46,8 +46,7 @@ state:{
     nav:[
         {
             name:'home',
-            path:'/home',
- 
+            path:'/',
             id:0,
         },
         {
