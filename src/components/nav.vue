@@ -20,7 +20,8 @@
 
                  </div>
 <div class="col-md-3">
- <btn  bgcolor="#ffff" txtcolor="#FF047B">sign in</btn>
+  <router-link to="/signin"><btn  bgcolor="#ffff" txtcolor="#FF047B">sign in</btn></router-link>
+ 
 </div>
 </nav>
 </template>

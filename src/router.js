@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from './views/Home'
-import register from './views/register'
 import contact from './views/contact'
 import gallery from './views/gallery'
+import signin from './views/signin'
 
 
 
@@ -16,10 +16,7 @@ routes:[
 path:'/',
 component:Home
 },
-{
-    path:'/register',
-    component:register
-},
+
 {
     path:'/contact',
     component:contact
@@ -32,6 +29,10 @@ component:Home
     path:'/dashboard/member/chat',
     component:gallery
 },
+     {path:'/signin',
+     component:signin
+    }
+
 
   ]
 })
