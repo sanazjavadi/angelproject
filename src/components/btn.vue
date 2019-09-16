@@ -1,8 +1,14 @@
 <template>
     <div>
-        <button class="btn" 
+        <button @click="$emit('sanaz')" class="btn" 
         :style="{color:txtcolor,backgroundColor:bgcolor ? bgcolor :defaultbgcolor}">
         <slot></slot>
+        <!-- <h1>
+            <slot name="sanaz"></slot>
+            </h1>
+
+        <h3><slot name="hamid"></slot></h3>
+        </button> -->
         </button>
     </div>
 </template>

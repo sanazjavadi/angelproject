@@ -1,14 +1,14 @@
 <template>
              <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                 <div class="col-md-4">
+                 <div class="col-md-3">
                       <a class="navbar-brand" href="#">logo</a>
                  </div>
                  <div class="col-md-6">
                        
               <ul class="navbar-nav mr-auto">
-              <li :class="{ navclass : naav.active }"
+              <li :class="naav.name == selectedItem ? 'navclass' : ''"
                v-for="(naav, index) in nav" 
-              :key="naav.id" @click="activeitem(nav[index])">
+              :key="naav.id" @click="activeitem(naav.name)">
                   <router-link :to="naav.path" class="nav-link">
                       {{naav.name}}
                       <span class="sr-only">(current)</span>
@@ -31,7 +31,8 @@ export default {
     components:{btn},
     data:function(){
         return{
-          nav:[]
+          nav:[],
+          selectedItem:"home",
         
         }
     }
@@ -56,7 +57,7 @@ methods:{
     //  this.$store.commit('activeitem',{
     //    id : nav.id
     //  })
-
+  this.selectedItem = nav;
     
   nav.active = !nav.active;
    
@@ -69,8 +70,8 @@ methods:{
 }
 }
 </script>
-<style >
+<style scoped >
 .navclass{
-   background-color:red;
+   color:red;
 }
 </style>

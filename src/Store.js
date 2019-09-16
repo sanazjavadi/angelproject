@@ -48,6 +48,7 @@ state:{
             name:'home',
             path:'/',
             id:0,
+            
         },
         {
             name:'about',
@@ -75,7 +76,8 @@ state:{
             path:'/contact',
             id:5,
         },
-    ]
+    ],
+    token:'',
 
 }
 })

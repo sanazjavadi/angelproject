@@ -5,6 +5,7 @@
         <div class="form-container sign-up-container">
     <form >
         <h2>Create Account</h2>
+        <h1> {{ $store.state.token }} </h1>
         <div >
             <a href="#" ><img class="social social-container p-1" :src="sm.url" alt="" v-for="sm in social"></a>
 
@@ -13,7 +14,8 @@
         <input type="text" placeholder="Name" v-model="name"/>
         <input type="email" placeholder="Email" v-model="email"/>
         <input type="password" placeholder="Password" v-model="password"/>
-        <button @click="signup">Sign Up</button>
+        <btn @sanaz="signup"  bgcolor="#FF047B" txtcolor="#fff"
+        >Sign Up</btn>
     </form>
 </div>
    
@@ -31,8 +33,9 @@
         <input type="password" placeholder="Password" v-model="signinpass" />
        <router-link to="/forgotpass">Forgot Your Password?</router-link>
        <router-link :to="`/${1+2}/dashboard`">
-        <button @click="signin">Sign In</button>
+    <btn  bgcolor="#FF047B" txtcolor="#fff" @sanaz="signin">sign in</btn>
         </router-link>
+       
        
     </form>
 </div>
@@ -60,7 +63,9 @@
 </template>
 <script>
 import axios from 'axios'
+import btn from '../components/btn'
 export default {
+    components:{btn},
     data:function(){
         return{
                        social:[
@@ -99,7 +104,10 @@ export default {
              email:this.email
          })
          .then(res =>
-          console.log(res))
+         {
+              console.log(res)
+          this.$store.state.token = res.data.token.accessToken
+         })
          .catch(err => {
          if(err.response.data.code == 400) {
            alert('please fill all form');
@@ -114,6 +122,11 @@ export default {
             }
         },
         signin(){
+    //         const config = {
+    //   headers: {
+    //       'Authorization': "bearer " + token
+    //             }
+    //                       };
             return axios
             .post('http://5.253.27.170:3000/v1/auth/login',{
                 email:this.signinemail,
@@ -122,7 +135,7 @@ export default {
             .then(res =>
             console.log(res))
             .catch(err =>
-            console.log(err))
+            console.log(err.response))
         }
     }
 }

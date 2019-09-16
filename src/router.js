@@ -25,7 +25,8 @@ component:Home
 },
 {
     path:'/gallery',
-    component:gallery
+    component:gallery,
+    name:'gallery'
 },
 {
     path:'/dashboard/member/chat',
@@ -40,7 +41,8 @@ component:Home
     },
     {
         path:'/:userid/dashboard',
-        component:dashboard
+        component:dashboard,
+        name:'dashboard'
     }
 
 

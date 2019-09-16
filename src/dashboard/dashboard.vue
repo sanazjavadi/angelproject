@@ -91,8 +91,27 @@ import sidebar from './sidebardash'
 import topnav from './dashboardnav'
 import card from './dashboardcard'
 import maincontent from './content'
+import axios from 'axios'
 export default {
-    components:{sidebar,topnav,card,maincontent}
+    components:{sidebar,topnav,card,maincontent},
+    created(){
+      this.getfetch();
+    },
+    methods:{
+      getfetch(){
+         return axios
+         .get('http://5.253.27.170:3000/v1/users/profile', {
+           headers:{
+             authorization :'bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1NjgxNDkxNzcsImlhdCI6MTU2ODE0ODI3Nywic3ViIjoiNWQ3Njk3MjQ5OTc1MWMwMDI1ODVhNmE0In0.OpIH1rJPrX3tEG0bKV77bIblzcCK9BiqaNzCj7Dam8I'
+           }
+         })
+         .then(res=>{
+       console.log(res);
+         })
+         .catch(err=>
+         console.log(err.response))
+      }
+    }
 }
 </script>
 <style src="../css/sb-admin-2.css" scoped>
