@@ -44,7 +44,7 @@ export default {
 }
 
 body {
-  background: $color-body-bg;
+  background: white;
 }
 #app {
   @extend %typography-small;
@@ -56,7 +56,7 @@ body {
 
 a,
 a:visited {
-  color: $color-link-text;
+  color: black;
 }
 
 h1 {
@@ -83,8 +83,4 @@ h6 {
 // ===
 // Vendor
 // ===
-
-#nprogress .bar {
-  background: $color-link-text;
-}
 </style>
