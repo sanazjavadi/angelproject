@@ -41,6 +41,7 @@
     "normalize.css": "8.0.1",
     "nprogress": "0.2.0",
     "vue": "2.6.11",
+    "vue-fragment": "^1.5.1",
     "vue-meta": "2.3.3",
     "vue-router": "3.1.6",
     "vuex": "3.1.2"

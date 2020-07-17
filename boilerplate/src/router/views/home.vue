@@ -1,17 +1,23 @@
 <script>
 import appConfig from '@src/app.config'
-
+import banner from '@layouts/home/banner.vue'
+import welcome from '@layouts/home/welcome.vue'
+import about from '@layouts/home/about.vue'
 export default {
   page: {
     title: 'Home',
     meta: [{ name: 'description', content: appConfig.description }],
   },
-  components: {},
+  components: { banner, welcome, about },
 }
 </script>
 
 <template>
-  <div></div>
+  <div class="container-fluid">
+    <banner />
+    <about />
+    <welcome />
+  </div>
 </template>
 
 <style lang="scss" scoped>

@@ -15,13 +15,14 @@ export default {
           title: 'تماس با ما',
           link: 'contact',
         },
-        {
-          title: 'موسسات',
-          link: 'institues',
-        },
+
         {
           title: 'آرشیو',
           link: 'archive',
+        },
+        {
+          title: 'سهم شما',
+          link: '',
         },
       ],
       selected: 0,
@@ -74,7 +75,7 @@ export default {
 .menu {
   display: flex;
   justify-content: space-between;
-  width: 70%;
+  width: 80%;
   font-weight: 900;
   cursor: pointer;
 }

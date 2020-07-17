@@ -48,7 +48,7 @@ export default {
 }
 
 body {
-  background: white;
+  background: #f8f7f7;
   font-family: 'Samim', sans-serif;
 }
 #app {

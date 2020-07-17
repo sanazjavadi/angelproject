@@ -41,6 +41,10 @@ export default {
   outline: none;
   border: none;
   border-radius: 5px;
+  transition: background-color 1s ease;
+  &:hover {
+    animation: rainbow 3s ease;
+  }
 }
 .whitebtn {
   width: 186px;
@@ -52,5 +56,24 @@ export default {
   outline: none;
   border: 2px solid $dark-blue;
   border-radius: 5px;
+}
+
+@keyframes rainbow {
+  0% {
+    background-color: $light-blue;
+  }
+  25% {
+    background-color: pink;
+  }
+  50% {
+    background-color: purple;
+  }
+  75% {
+    background-color: rgb(214, 152, 214);
+  }
+
+  100% {
+    background-color: $dark-blue;
+  }
 }
 </style>
