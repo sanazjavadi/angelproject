@@ -12,8 +12,11 @@ export default {
 
 <template>
   <div>
+    سلام خوبی چطوری سلام خوبی چطوری سلام خوبی چطوری سلام خوبی چطوری سلام خوبی
+    چطوری
+
     <BaseButton>
-      discover me
+      سلام خوبی چطوری
     </BaseButton>
   </div>
 </template>

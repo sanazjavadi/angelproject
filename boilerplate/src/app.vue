@@ -45,6 +45,7 @@ export default {
 
 body {
   background: white;
+  font-family: 'Samim', sans-serif;
 }
 #app {
   @extend %typography-small;
