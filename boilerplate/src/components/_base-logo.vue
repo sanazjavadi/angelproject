@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <div class="logo-wrapper">
+  <div class="logo-wrapper" :style="{ height: height + 'px' }">
     <logosvg
       class="logo"
       :style="{ height: height + 'px', width: width + 'px' }"
@@ -35,7 +35,6 @@ export default {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-  padding-bottom: 30%;
 
   .logo {
     position: absolute;

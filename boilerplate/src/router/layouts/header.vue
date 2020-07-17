@@ -4,19 +4,39 @@ export default {
     return {
       items: [
         {
+          title: 'خانه',
+          link: 'home',
+        },
+        {
           title: 'درباره ما',
+          link: 'about',
         },
         {
           title: 'تماس با ما',
+          link: 'contact',
         },
         {
           title: 'موسسات',
+          link: 'institues',
         },
         {
           title: 'آرشیو',
+          link: 'archive',
         },
       ],
+      selected: 0,
     }
+  },
+  computed: {
+    isActive() {
+      return (index) =>
+        this.selected === index ? { color: '#172f66' } : { color: '#696478' }
+    },
+  },
+  methods: {
+    activeItem(item) {
+      this.selected = item
+    },
   },
 }
 </script>
@@ -24,15 +44,24 @@ export default {
 <template>
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="borderr col-lg-4 d-flex justify-content-center">
+      <div class="col-lg-4 d-flex justify-content-center">
         <BaseLogo />
       </div>
     </div>
     <div class="row justify-content-center mt-2">
       <div class="col-lg-6 d-flex justify-content-center">
         <ul class="menu">
-          <li v-for="(item, index) in items" :key="index">
-            {{ item.title }}
+          <li
+            v-for="(item, index) in items"
+            :key="index"
+            @click="activeItem(index)"
+          >
+            <router-link
+              :to="{ name: `${item.link}` }"
+              :style="isActive(index)"
+            >
+              {{ item.title }}
+            </router-link>
           </li>
         </ul>
       </div>
@@ -47,7 +76,6 @@ export default {
   justify-content: space-between;
   width: 70%;
   font-weight: 900;
-  color: #696478;
   cursor: pointer;
 }
 </style>
