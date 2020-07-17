@@ -1,9 +1,9 @@
 <template>
-  <section class="we-create-area">
+  <section class="section-margin">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-12">
-          <div class="we-create-cap">
+          <div class="description">
             <h3>ما چیکارمیکنیم</h3>
             <p
               >به مهربانی به مهربانی تلاشی دسته جمعی ست تا کودکان ایران به دلیل
@@ -19,8 +19,12 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-12">
-          <div class="we-create-img">
-            <!-- <img src="@assets/images/charity.jpg" alt="" /> -->
+          <div class="img-desc d-flex justify-content-center">
+            <img
+              src="https://bemehrbani.com/blog/wp-content/uploads/2018/06/2.png"
+              class="img-fluid"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -30,135 +34,25 @@
 
 <style lang="scss" scoped>
 @import '@design';
-
-.we-create-area {
-  position: relative;
-}
-.we-create-area::before {
-  background-image: url(http://127.1:5500/seos/assets/img/shape/we-create_bg.png);
-  position: absolute;
-  content: '';
-  top: 0;
-  z-index: -1;
-  min-height: 819px;
-  min-width: 1006px;
-  background-repeat: no-repeat;
-  left: -117px;
-}
-@media only screen and (min-width: 1200px) and (max-width: 1600px) {
-  .we-create-area::before {
-    display: none;
+.section-margin {
+  margin-top: 100px;
+  .description {
+    h3 {
+      color: $dark-blue;
+    }
+    p {
+      color: $gray;
+      line-height: 2.5rem;
+    }
   }
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .we-create-area::before {
-    display: none;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .we-create-area::before {
-    display: none;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .we-create-area::before {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .we-create-area::before {
-    display: none;
-  }
-}
-.we-create-area::after {
-  background-image: url(http://127.1:5500/seos/assets/img/shape/we_create_right.png);
-  position: absolute;
-  content: '';
-  z-index: -1;
-  min-height: 262px;
-  min-width: 207px;
-  background-repeat: no-repeat;
-  right: 0px;
-  bottom: 178px;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .we-create-area::after {
-    display: none;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .we-create-area::after {
-    display: none;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .we-create-area::after {
-    display: none;
-  }
-}
-@media (max-width: 767px) {
-  .we-create-area::after {
-    display: none;
-  }
-}
-.we-create-area .we-create-img img {
-  width: 100%;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .we-create-area .we-create-img img {
-    padding-top: 30px;
-  }
-}
-.we-create-area .we-create-cap h3 {
-  color: #2b4b80;
-  font-size: 50px;
-  font-weight: 700;
-  line-height: 1.3;
-  margin-bottom: 29px;
-}
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .we-create-area .we-create-cap h3 {
-    font-size: 29px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .we-create-area .we-create-cap h3 {
-    font-size: 42px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .we-create-area .we-create-cap h3 {
-    font-size: 36px;
-    line-height: 1.3;
-    padding-right: 0px;
-  }
-}
-@media (max-width: 767px) {
-  .we-create-area .we-create-cap h3 {
-    font-size: 25px;
-    line-height: 1.3;
-    padding-right: 0px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .we-create-area .we-create-cap p {
-    padding-right: 10px;
-  }
-}
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .we-create-area .we-create-cap p {
-    padding-right: 10px;
-  }
-}
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .we-create-area .we-create-cap p {
-    padding-right: 10px;
-  }
-}
-@media (max-width: 767px) {
-  .we-create-area .we-create-cap p {
-    padding-right: 10px;
+  .img-desc {
+    background-color: $dark-blue;
+    border-radius: 5px;
+    width: 90%;
+    margin: auto;
+    img {
+      height: 400px;
+    }
   }
 }
 </style>
