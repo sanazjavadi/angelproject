@@ -48,7 +48,7 @@
   .img-desc {
     background-color: $dark-blue;
     border-radius: 5px;
-    width: 90%;
+    width: 80%;
     margin: auto;
     img {
       height: 400px;

@@ -1,6 +1,7 @@
 <script>
 import appConfig from '@src/app.config'
 import Header from '@layouts/header.vue'
+import Footer from '@layouts/footer.vue'
 export default {
   page: {
     // All subcomponent titles will be injected into this template.
@@ -11,6 +12,7 @@ export default {
   },
   components: {
     Header,
+    Footer,
   },
 }
 </script>
@@ -23,6 +25,7 @@ export default {
     as distinct and create the component again.
     -->
     <RouterView :key="$route.fullPath" />
+    <Footer />
   </div>
 </template>
 

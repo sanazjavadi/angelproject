@@ -34,7 +34,7 @@
 }
 .inner-box {
   text-align: center;
-  padding: 60px 0;
+  padding: 80px 0;
   border-radius: 5px;
   background-color: #ffffff;
   border: 1px solid #e8e6ec;
