@@ -20,7 +20,7 @@ export default {
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="logo-wrapper">
     <logosvg
       class="logo"
       :style="{ height: height + 'px', width: width + 'px' }"
@@ -30,16 +30,19 @@ export default {
 
 <style lang="scss" scoped>
 @import '@design';
-.wrapper {
+.logo-wrapper {
   position: relative;
   display: inline-block;
   vertical-align: middle;
-  padding-bottom: 100%;
+  width: 100%;
+  padding-bottom: 30%;
+
   .logo {
     position: absolute;
     display: inline-block;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
   }
 }
 </style>

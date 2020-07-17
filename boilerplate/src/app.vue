@@ -1,6 +1,6 @@
 <script>
 import appConfig from '@src/app.config'
-
+import Header from '@layouts/header.vue'
 export default {
   page: {
     // All subcomponent titles will be injected into this template.
@@ -9,11 +9,15 @@ export default {
       return title ? `${title} | ${appConfig.title}` : appConfig.title
     },
   },
+  components: {
+    Header,
+  },
 }
 </script>
 
 <template>
   <div id="app">
+    <Header />
     <!--
     Even when routes use the same component, treat them
     as distinct and create the component again.
@@ -49,6 +53,7 @@ body {
 }
 #app {
   @extend %typography-small;
+  direction: rtl;
 }
 
 // ===

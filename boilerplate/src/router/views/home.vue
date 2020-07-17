@@ -11,13 +11,7 @@ export default {
 </script>
 
 <template>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-lg-12">
-        <baseLogo />
-      </div>
-    </div>
-  </div>
+  <div></div>
 </template>
 
 <style lang="scss" scoped>
