@@ -5,6 +5,26 @@ export default [
     component: () => lazyLoadView(import('@views/home.vue')),
   },
   {
+    path: '/about',
+    name: 'about',
+    component: () => lazyLoadView(import('@views/about.vue')),
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => lazyLoadView(import('@views/contact.vue')),
+  },
+  {
+    path: '/archive',
+    name: 'archive',
+    component: () => lazyLoadView(import('@views/archive.vue')),
+  },
+  {
+    path: '/institues',
+    name: 'institues',
+    component: () => lazyLoadView(import('@views/institus.vue')),
+  },
+  {
     path: '/404',
     name: '404',
     component: require('@views/_404.vue').default,
