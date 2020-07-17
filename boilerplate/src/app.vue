@@ -48,12 +48,13 @@ export default {
 }
 
 body {
-  background: #f8f7f7;
+  background: white;
   font-family: 'Samim', sans-serif;
 }
 #app {
   @extend %typography-small;
   direction: rtl;
+  overflow-x: hidden;
 }
 
 // ===

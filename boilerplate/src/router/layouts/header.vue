@@ -43,8 +43,8 @@ export default {
 </script>
 
 <template>
-  <div class="container-fluid">
-    <div class="row justify-content-center">
+  <div class="container-fluid ">
+    <div class="row justify-content-center pt-3 pb-3">
       <div class="col-lg-4 d-flex justify-content-center">
         <BaseLogo />
       </div>
