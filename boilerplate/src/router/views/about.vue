@@ -1,22 +1,19 @@
 <script>
-import Layout from '@layouts/main.vue'
-
 export default {
   page: {
     title: 'About',
     meta: [{ name: 'description', content: 'The About page.' }],
   },
-  components: { Layout }
+  components: {},
 }
 </script>
 
 <template>
-  <Layout>
+  <div>
     About
-  </Layout>
+  </div>
 </template>
 
 <style lang="scss" module>
 @import '@design';
 </style>
-

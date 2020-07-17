@@ -1,22 +1,19 @@
 <script>
-import Layout from '@layouts/main.vue'
-
 export default {
   page: {
     title: 'Archive',
     meta: [{ name: 'description', content: 'The Archive page.' }],
   },
-  components: { Layout }
+  components: {},
 }
 </script>
 
 <template>
-  <Layout>
+  <div>
     Archive
-  </Layout>
+  </div>
 </template>
 
 <style lang="scss" module>
 @import '@design';
 </style>
-

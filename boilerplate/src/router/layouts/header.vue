@@ -8,7 +8,7 @@ export default {
           link: 'home',
         },
         {
-          title: 'درباره ما',
+          title: 'چه کارهایی میکنیم',
           link: 'about',
         },
         {
