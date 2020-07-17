@@ -6,13 +6,13 @@ export default {
     height: {
       type: Number,
       default: () => {
-        return 80
+        return 150
       },
     },
     width: {
       type: Number,
       default: () => {
-        return 80
+        return 150
       },
     },
   },
