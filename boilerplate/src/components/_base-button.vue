@@ -9,6 +9,13 @@ export default {
       type: String,
       default: null,
     },
+    theme: {
+      type: String,
+      default: 'bluebtn',
+      validator(v) {
+        return ['bluebtn', 'pinkbtn'].includes(v)
+      },
+    },
   },
   computed: {
     type() {
@@ -23,53 +30,36 @@ export default {
 </script>
 
 <template>
-  <component :is="type" :href="href" class="bluebtn">
+  <component :is="type" :href="href" :class="['btn', theme]">
     <slot />
   </component>
 </template>
 
 <style lang="scss" scoped>
 @import '@design';
-.lg {
-  width: 250px;
-  height: 60px;
+
+.btn {
   color: white;
-  background-color: $light-blue;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 800;
   outline: none;
   border: none;
-  border-radius: 5px;
+
+  padding: 15px 40px;
+  line-height: 30px;
+  cursor: pointer;
   transition: background-color 1s ease;
   &:hover {
     animation: rainbow 3s ease;
   }
 }
 .bluebtn {
-  width: 186px;
-  height: 60px;
-  color: white;
+  @extend .btn;
   background-color: $light-blue;
-  font-size: 14px;
-  font-weight: 800;
-  outline: none;
-  border: none;
-  border-radius: 5px;
-  transition: background-color 1s ease;
-  &:hover {
-    animation: rainbow 3s ease;
-  }
 }
-.whitebtn {
-  width: 186px;
-  height: 60px;
-  color: $dark-blue;
-  background-color: white;
-  font-size: 14px;
-  font-weight: 800;
-  outline: none;
-  border: 2px solid $dark-blue;
-  border-radius: 5px;
+.pinkbtn {
+  @extend .btn;
+  background-color: $pink;
 }
 
 @keyframes rainbow {

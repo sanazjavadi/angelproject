@@ -17,11 +17,11 @@ export default {
         },
 
         {
-          title: 'آرشیو',
+          title: 'فروشگاه مهربانی',
           link: 'archive',
         },
         {
-          title: 'سهم شما',
+          title: 'حمایت شما',
           link: '',
         },
       ],

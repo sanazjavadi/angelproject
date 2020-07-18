@@ -103,7 +103,9 @@ export default {
     <!--Footer Bottom-->
     <div class="footer-bottom">
       <div class="container-fluid ">
-        <div class="copyright ml-lg-3"> تمام حقوق برای فرشته محفوظ است</div>
+        <div class="copyright ml-lg-3">
+          تمام حقوق برای بنیاد نیکوکاری فرشته محفوظ است</div
+        >
         <ul class="social-icon-two">
           <li
             ><a href="#"> <twiiter /> </a
