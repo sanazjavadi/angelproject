@@ -30,7 +30,21 @@ export default {
 
 <style lang="scss" scoped>
 @import '@design';
-
+.lg {
+  width: 250px;
+  height: 60px;
+  color: white;
+  background-color: $light-blue;
+  font-size: 14px;
+  font-weight: 800;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 1s ease;
+  &:hover {
+    animation: rainbow 3s ease;
+  }
+}
 .bluebtn {
   width: 186px;
   height: 60px;
