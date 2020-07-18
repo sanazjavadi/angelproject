@@ -35,13 +35,14 @@ export default {
   display: inline-block;
   vertical-align: middle;
   width: 100%;
-
+  cursor: pointer;
   .logo {
     position: absolute;
     display: inline-block;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
+    cursor: pointer;
   }
 }
 </style>
