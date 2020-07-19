@@ -3,14 +3,14 @@ import appConfig from '@src/app.config'
 import banner from '@layouts/home/banner.vue'
 import welcome from '@layouts/home/welcome.vue'
 import about from '@layouts/home/about.vue'
+import dreamSection from '@layouts/home/dream-section.vue'
 
-import sellignCart from '@components/selling-cart.vue'
 export default {
   page: {
     title: 'Home',
     meta: [{ name: 'description', content: appConfig.description }],
   },
-  components: { banner, welcome, about, sellignCart },
+  components: { banner, welcome, about, dreamSection },
 }
 </script>
 
@@ -20,28 +20,13 @@ export default {
 
     <welcome />
     <about />
-
-    <section class="mt-5 pt-5">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-lg-3">
-            <sellignCart />
-          </div>
-          <div class="col-lg-3">
-            <sellignCart />
-          </div>
-          <div class="col-lg-3">
-            <sellignCart />
-          </div>
-        </div>
-      </div>
-    </section>
+    <dreamSection />
   </div>
 </template>
 
 <style lang="scss" scoped>
 @import '@design';
 .container-fluid {
-  padding-left: 0;
+  padding: 0;
 }
 </style>

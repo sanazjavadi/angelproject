@@ -36,13 +36,16 @@ export default {}
 
 <style lang="scss" scoped>
 @import '@design';
+.container-fluid {
+  padding: 0;
+}
 .dream-block {
   position: relative;
   margin-bottom: 30px;
   max-width: 350px;
+
   min-height: 500px;
   width: 100%;
-  border: 1px solid red;
   .inner-box {
     position: relative;
     overflow: hidden;
