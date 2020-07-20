@@ -25,8 +25,8 @@ export default {}
         آرزو دارم یک دفتر داشته باشم. من لپ تاپ دوست دارم.
       </div>
 
-      <div class="btn-box">
-        <BaseButton>
+      <div class="btn-box pt-5">
+        <BaseButton style="width:100%">
           می خوام به برآوردن ای آرزو کمک کنم
         </BaseButton>
       </div>
@@ -43,7 +43,6 @@ export default {}
   position: relative;
   margin-bottom: 30px;
   max-width: 350px;
-
   min-height: 500px;
   width: 100%;
   .inner-box {

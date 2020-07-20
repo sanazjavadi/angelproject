@@ -44,7 +44,6 @@ export default {
   font-weight: 800;
   outline: none;
   border: none;
-
   padding: 15px 40px;
   line-height: 30px;
   cursor: pointer;
