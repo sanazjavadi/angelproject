@@ -2,22 +2,18 @@
   <section class="section-margin">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-3">
+        <div class="col-lg-4">
+          <div class="inner-box">
+            <div class="icon-box"> </div>
+            <span> </span>
+          </div>
+        </div>
+        <div class="col-lg-4">
           <div class="inner-box">
             <div class="icon-box"> </div>
           </div>
         </div>
-        <div class="col-lg-3">
-          <div class="inner-box">
-            <div class="icon-box"> </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="inner-box">
-            <div class="icon-box"> </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
+        <div class="col-lg-4 ">
           <div class="inner-box">
             <div class="icon-box"> </div>
           </div>
@@ -34,9 +30,9 @@
 }
 .inner-box {
   text-align: center;
-  padding: 80px 0;
+  padding: 50px 0;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: white;
   border: 1px solid #e8e6ec;
   .icon-box {
     position: relative;
@@ -49,7 +45,7 @@
     color: #ffffff;
     border-radius: 50%;
     overflow: hidden;
-    background-color: #1e2c67;
+    background-color: #ffedf2;
     margin-bottom: 20px;
   }
 }

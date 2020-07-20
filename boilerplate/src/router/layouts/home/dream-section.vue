@@ -11,23 +11,25 @@ export default {
   <section class="sec-dream">
     <div class="sec-title text-center">
       <h2>
-        آرزوهای بچه ها
+        لیست آرزوهای بچه ها
+        <br />
+        رو ببین و هر کدوم رو خواستی برآورده کن
       </h2>
     </div>
     <div class="container-fluid">
-      <div class="row justify-content-center ">
+      <div class="row justify-content-center no-gutters">
         <div
-          class="col-lg-3 col-md-7 col-sm-7 col-xs-9 col-11 d-flex justify-content-center"
+          class="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-end"
         >
           <sellignCart />
         </div>
         <div
-          class="col-lg-3 col-md-7 col-sm-7 col-xs-9 col-11 d-flex justify-content-center"
+          class="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-center"
         >
           <sellignCart />
         </div>
         <div
-          class="col-lg-3 col-md-7 col-sm-7 col-xs-9 col-11 d-flex justify-content-center"
+          class="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-start"
         >
           <sellignCart />
         </div>
@@ -43,15 +45,14 @@ export default {
 }
 .sec-dream {
   position: relative;
-  padding: 120px 0 90px;
+  padding: 80px 0 90px;
   background-color: #f2f5f6;
 }
 .sec-title h2 {
   display: block;
-  font-size: 30px;
-  line-height: 1.2em;
   color: $dark-blue;
   font-weight: 700;
-  padding: 20px 0px;
+  padding-bottom: 70px;
+  line-height: 5rem;
 }
 </style>

@@ -34,9 +34,11 @@ export default {
         <h2 class="pb-4">
           تا الان
         </h2>
-        <span>
-          {{ count }}
-        </span>
+        <div class="counts">
+          <span>0</span>
+          <span>0</span>
+          <span>4</span>
+        </div>
 
         <h2 class="pt-4">
           آرزو برآورده شده
@@ -66,8 +68,33 @@ export default {
     top: -150px;
     left: 45%;
   }
-  span {
-    font-size: 50px;
+  div {
+    line-height: 1.4em;
+    text-align: center;
+    :first-child {
+      display: inline-block;
+
+      font-size: 50px;
+      color: #ffaa14;
+
+      text-align: center;
+    }
+    :nth-child(2) {
+      display: inline-block;
+
+      font-size: 50px;
+      color: pink;
+
+      text-align: center;
+    }
+    :last-child {
+      display: inline-block;
+      color: #ff437e;
+      border-radius: 100%;
+
+      font-size: 50px;
+      text-align: center;
+    }
   }
 }
 </style>

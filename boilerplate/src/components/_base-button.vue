@@ -45,6 +45,7 @@ export default {
   outline: none;
   border: none;
   padding: 15px 40px;
+  border-radius: 5px;
   line-height: 30px;
   cursor: pointer;
   transition: background-color 1s ease;
@@ -54,7 +55,7 @@ export default {
 }
 .bluebtn {
   @extend .btn;
-  background-color: $light-blue;
+  background-color: $dark-blue;
 }
 .pinkbtn {
   @extend .btn;

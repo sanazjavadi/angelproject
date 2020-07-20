@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-6 col-md-12">
           <div class="description">
-            <h3>ما چیکارمیکنیم</h3>
+            <h2>ما چیکار میکنیم</h2>
             <p
               >همه ما در کودکی آرزوهایی را در سر می پروراندیم که هرگز نتوانستیم
               به آن ها برسیم. امروز خیلی از ما قدرت آن را داریم که آن آرزو ها را
@@ -21,7 +21,7 @@
         <div class="col-lg-6 col-md-12">
           <div class="img-desc d-flex justify-content-center">
             <img
-              src="https://bemehrbani.com/blog/wp-content/uploads/2018/06/2.png"
+              src="https://image.freepik.com/free-vector/businessman-is-standing-stairs-reaching-star-sky-flat-illustration-goals-dreams-business-career-concept-modern-design-flat-style-illustration-isolated_126608-320.jpg"
               class="img-fluid"
               alt=""
             />
@@ -35,23 +35,24 @@
 <style lang="scss" scoped>
 @import '@design';
 .section-margin {
-  margin-top: 100px;
+  margin: 330px 0 150px 0;
   .description {
-    h3 {
+    h2 {
       color: $dark-blue;
+      padding-bottom: 40px;
     }
     p {
       color: $gray;
       line-height: 2.5rem;
+      text-align: right;
     }
   }
   .img-desc {
-    background-color: $dark-blue;
     border-radius: 5px;
-    width: 80%;
+    width: 100%;
     margin: auto;
     img {
-      height: 400px;
+      height: 500px;
     }
   }
 }

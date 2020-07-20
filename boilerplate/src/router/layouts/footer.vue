@@ -162,20 +162,9 @@ export default {
 }
 .main-footer {
   position: relative;
-  background-color: #1e2c67;
+  background-color: $dark-blue;
 }
-.main-footer:before {
-  position: absolute;
-  left: 0;
-  top: -23px;
-  width: 100%;
-  height: 23px;
-  background-image: url('http://t.commonsupport.xyz/gaowa/images/icons/footer-curve.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  content: '';
-}
+
 .main-footer .anim-icons .icon {
   opacity: 0.08;
 }
@@ -285,17 +274,7 @@ export default {
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
-.main-footer .footer-bottom:before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0.03;
-  background-image: url('http://t.commonsupport.xyz/gaowa/images/icons/pattern.png');
-  content: '';
-}
+
 .main-footer .footer-bottom .social-icon-two {
   float: left;
 }

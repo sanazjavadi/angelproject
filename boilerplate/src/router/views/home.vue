@@ -1,7 +1,7 @@
 <script>
 import appConfig from '@src/app.config'
 import banner from '@layouts/home/banner.vue'
-import welcome from '@layouts/home/welcome.vue'
+
 import about from '@layouts/home/about.vue'
 import dreamSection from '@layouts/home/dream-section.vue'
 import countUpSection from '@layouts/home/countup-vue.vue'
@@ -10,14 +10,13 @@ export default {
     title: 'Home',
     meta: [{ name: 'description', content: appConfig.description }],
   },
-  components: { banner, welcome, about, dreamSection, countUpSection },
+  components: { banner, about, dreamSection, countUpSection },
 }
 </script>
 
 <template>
   <div class="container-fluid">
     <banner />
-    <welcome />
     <about />
     <dreamSection />
     <countUpSection />
