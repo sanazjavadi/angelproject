@@ -1,43 +1,11 @@
 export default [
   {
-    path: '/',
-    name: 'home',
-    component: () => lazyLoadView(import('@views/home.vue')),
-  },
-  {
-    path: '/about',
-    name: 'about',
-    component: () => lazyLoadView(import('@views/about.vue')),
-  },
-  {
-    path: '/contact',
-    name: 'contact',
-    component: () => lazyLoadView(import('@views/contact.vue')),
-  },
-  {
-    path: '/archive',
-    name: 'archive',
-    component: () => lazyLoadView(import('@views/archive.vue')),
-  },
-  {
-    path: '/institues',
-    name: 'institues',
-    component: () => lazyLoadView(import('@views/institus.vue')),
-  },
-  {
-    path: '/404',
-    name: '404',
-    component: require('@views/_404.vue').default,
-    // Allows props to be passed to the 404 page through route
-    // params, such as `resource` to define what wasn't found.
-    props: true,
-  },
-  // Redirect any unmatched routes to the 404 page. This may
-  // require some server configuration to work in production:
-  // https://router.vuejs.org/en/essentials/history-mode.html#example-server-configurations
-  {
-    path: '*',
-    redirect: '404',
+    path: '/explore',
+    name: 'explore',
+    component: () =>
+      lazyLoadView(
+        import(/* webpackChunkName: "explore" */ '@views/explore.vue')
+      ),
   },
 ]
 

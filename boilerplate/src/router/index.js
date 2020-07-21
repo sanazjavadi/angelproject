@@ -5,7 +5,7 @@ import VueMeta from 'vue-meta'
 // Adds a loading bar at the top during page loads.
 import NProgress from 'nprogress/nprogress'
 import store from '@state/store'
-import routes from './routes'
+import routes from '@router/routes'
 
 Vue.use(VueRouter)
 Vue.use(VueMeta, {
@@ -14,7 +14,7 @@ Vue.use(VueMeta, {
 })
 
 const router = new VueRouter({
-  routes,
+  routes: [...routes],
   // Use the HTML5 history API (i.e. normal-looking routes)
   // instead of routes with hashes (e.g. example.com/#/about).
   // This may require some server configuration in production:
