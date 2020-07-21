@@ -14,7 +14,7 @@ export default {
         <figure class="image">
           <router-link to="/">
             <blockqoute
-              color="#aa66fd
+              color="#ff555a
 
 "
             >

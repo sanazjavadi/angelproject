@@ -11,9 +11,9 @@ export default {
     },
     theme: {
       type: String,
-      default: 'bluebtn',
+      default: 'darkbtn',
       validator(v) {
-        return ['bluebtn', 'pinkbtn'].includes(v)
+        return ['darkbtn', 'lightbtn'].includes(v)
       },
     },
   },
@@ -44,8 +44,8 @@ export default {
   font-weight: 800;
   outline: none;
   border: none;
-  padding: 15px 40px;
-  border-radius: 5px;
+  padding: 15px 40px !important;
+  border-radius: 10px;
   line-height: 30px;
   cursor: pointer;
   transition: background-color 1s ease;
@@ -53,13 +53,13 @@ export default {
     animation: rainbow 3s ease;
   }
 }
-.bluebtn {
+.darkbtn {
   @extend .btn;
   background-color: $dark-blue;
 }
-.pinkbtn {
+.lightbtn {
   @extend .btn;
-  background-color: $pink;
+  background-color: $light-blue;
 }
 
 @keyframes rainbow {

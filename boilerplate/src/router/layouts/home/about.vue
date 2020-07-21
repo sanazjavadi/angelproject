@@ -35,7 +35,7 @@
 <style lang="scss" scoped>
 @import '@design';
 .section-margin {
-  margin: 330px 0 150px 0;
+  margin-top: 330px;
   .description {
     h2 {
       color: $dark-blue;

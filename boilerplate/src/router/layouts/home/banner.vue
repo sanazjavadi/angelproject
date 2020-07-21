@@ -41,9 +41,13 @@ export default {
           یک قلب ! یک آرزو
         </span>
         <h2 class="mt-4">می تونی دنیا رو به جای قشنگ تری تبدیل کنی</h2>
-        <baseButton class="mt-4">
-          می خواهم کمک کنم
-        </baseButton>
+
+        <div class="d-flex mt-4">
+          <baseButton class="mr-3" theme="lightbtn">
+            می خوام کمک کنم
+          </baseButton>
+          <baseButton> وارد شو </baseButton>
+        </div>
       </div>
     </div>
   </section>
