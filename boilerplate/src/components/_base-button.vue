@@ -44,6 +44,7 @@ export default {
   <component
     :is="type"
     :href="href"
+    class="btn"
     :class="['btn', theme]"
     @click="handleClick"
   >
@@ -55,13 +56,20 @@ export default {
 @import '@design';
 
 .btn {
-  font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
+
+  min-width: 150px;
   outline: none;
   border: none;
-  padding: 15px 40px !important;
-  border-radius: 10px;
-  line-height: 30px;
+  border: 1px solid transparent;
+  padding: 0 1rem;
+  font-size: 1rem;
+
+  vertical-align: middle;
+  height: 50px;
+  border-radius: 0.3rem;
+  display: inline-block;
+  transition: all 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
   cursor: pointer;
   transition: background-color 1s ease;
   &:hover {

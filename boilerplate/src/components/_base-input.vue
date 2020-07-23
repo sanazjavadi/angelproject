@@ -11,26 +11,32 @@ export default {
       validator: (v) => {
         return ['text', 'password', 'file', 'email'].includes(v)
       },
-      /**
-       * Input value
-       */
-      value: {
-        type: [String, Number],
-        default: '',
-      },
-      /**
-       * Input placeholder
-       */
-      placeholder: {
-        type: String,
-        default: null,
-      },
-      /**
-       * Input name.
-       */
-      name: {
-        type: String,
-      },
+    },
+    /**
+     * Input value
+     */
+    value: {
+      type: [String, Number],
+      default: '',
+    },
+    /**
+     * Input placeholder
+     */
+    placeholder: {
+      type: String,
+      default: null,
+    },
+    /**
+     * Input name.
+     */
+    name: {
+      type: String,
+      default: '',
+    },
+
+    align: {
+      type: String,
+      default: null,
     },
   },
 
@@ -53,10 +59,11 @@ export default {
   <input
     :type="type"
     :value="value"
-    :name="name"
+    :placeholder="placeholder"
     v-bind="$attrs"
-    change="onChange"
+    :change="onChange"
     class="form-control"
+    :dir="[align ? 'ltr' : 'rtl']"
     @input="onInput"
   />
 </template>

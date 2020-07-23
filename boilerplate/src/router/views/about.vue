@@ -12,7 +12,7 @@ export default {
   <section class="section-margin">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-6">
+        <div class="col-lg-5">
           <BaseForm />
         </div>
       </div>

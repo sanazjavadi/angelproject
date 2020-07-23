@@ -59,15 +59,7 @@ export default {
   font-weight: 900;
   position: relative;
   border: 1px solid #f0f0e7;
-  &::before {
-    position: absolute;
-    content: url('');
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    top: -150px;
-    left: 45%;
-  }
+
   div {
     line-height: 1.4em;
     text-align: center;

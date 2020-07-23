@@ -6,6 +6,11 @@ export default {}
   <div class="form-card">
     <BaseInput placeholder="نام" />
     <BaseInput placeholder="نام خانوادگی" class="mt-2" />
+    <BaseInput placeholder="آدرس ایمیل" class="mt-2" />
+    <BaseInput placeholder="کلمه عبور" class="mt-2" />
+    <baseButton class="mt-2">
+      ایجاد حساب کاربری
+    </baseButton>
   </div>
 </template>
 

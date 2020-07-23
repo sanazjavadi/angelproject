@@ -35,18 +35,22 @@ export default {
     ></div>
     <div class="row justify-content-center">
       <div
-        class="col-lg-6 d-flex flex-column justify-content-center align-items-center"
+        class="col-lg-6 col-11 d-flex flex-column justify-content-center align-items-center"
       >
         <span>
           یک قلب ! یک آرزو
         </span>
         <h2 class="mt-4">می تونی دنیا رو به جای قشنگ تری تبدیل کنی</h2>
-
-        <div class="d-flex mt-4">
-          <baseButton class="mr-3" theme="lightbtn">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-12 d-flex justify-content-center flex-wrap">
+          <baseButton class="mt-3 mr-3" theme="lightbtn">
             می خوام کمک کنم
           </baseButton>
-          <baseButton> وارد شو </baseButton>
+
+          <baseButton class="mt-3 ml-3"> وارد شو </baseButton>
         </div>
       </div>
     </div>
@@ -56,18 +60,17 @@ export default {
 <style lang="scss" scoped>
 @import '@design';
 .banner-section {
-  // background-color: #003d6e;
   #clouds1 {
     margin-top: -14px;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
-    background: url('https://www.typingclub.com/m/tpmedia/img/clouds1.png');
+    background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds1.png');
   }
   #clouds2 {
     margin-top: 20px;
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
-    background: url('https://www.typingclub.com/m/tpmedia/img/clouds2.png');
+    background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds2.png');
     border-bottom: 10px solid white;
     top: 600px;
   }
@@ -77,7 +80,7 @@ export default {
     -webkit-transition: all 0.2s linear;
     transition: all 0.2s linear;
     top: 600px;
-    background: url('https://www.typingclub.com/m/tpmedia/img/clouds3.png');
+    background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds3.png');
   }
   .clouds {
     position: absolute;
@@ -100,6 +103,10 @@ export default {
     font-size: 45px;
     line-height: 4rem;
     font-weight: 800;
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 2.5rem;
+    }
   }
 }
 </style>
