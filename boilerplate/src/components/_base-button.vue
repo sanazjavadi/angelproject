@@ -16,6 +16,12 @@ export default {
         return ['darkbtn', 'lightbtn'].includes(v)
       },
     },
+
+    icon: {
+      type: String,
+      default: '',
+      description: 'button icon',
+    },
   },
   computed: {
     type() {
@@ -26,11 +32,21 @@ export default {
       }
     },
   },
+  methods: {
+    handleClick(evt) {
+      this.$emit('click', evt)
+    },
+  },
 }
 </script>
 
 <template>
-  <component :is="type" :href="href" :class="['btn', theme]">
+  <component
+    :is="type"
+    :href="href"
+    :class="['btn', theme]"
+    @click="handleClick"
+  >
     <slot />
   </component>
 </template>

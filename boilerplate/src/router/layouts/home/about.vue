@@ -39,12 +39,12 @@
   .description {
     h2 {
       color: $dark-blue;
-      padding-bottom: 40px;
+      @extend %font-heading;
     }
     p {
       color: $gray;
-      line-height: 2.5rem;
       text-align: right;
+      @extend %font-content;
     }
   }
   .img-desc {

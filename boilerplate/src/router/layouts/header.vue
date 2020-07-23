@@ -18,7 +18,7 @@ export default {
 
         {
           title: 'فروشگاه مهربانی',
-          link: 'archive',
+          link: 'explore',
         },
         {
           title: 'حمایت شما',

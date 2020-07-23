@@ -1,19 +1,25 @@
-$system-default-font-family: 'Samim', 'BlinkMacSystemFont', 'Segoe UI',
-  'Helvetica', 'Arial', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-  'Segoe UI Symbol';
+$system-default-font-family: 'Samim';
 
 $heading-font-family: $system-default-font-family;
-$heading-font-weight: 600;
+$heading-font-weight: 900;
+$heading-font-size: 2.1875rem;
+$heading-font-padding: 2rem;
 
 $content-font-family: $system-default-font-family;
 $content-font-weight: 400;
+$content-font-size: 0.875rem;
+$content-line-height: 3em;
 
 %font-heading {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
+  font-size: $heading-font-size;
+  padding-bottom: $heading-font-padding;
 }
 
 %font-content {
   font-family: $content-font-family;
   font-weight: $content-font-weight;
+  font-size: $content-font-size;
+  line-height: $content-line-height;
 }
