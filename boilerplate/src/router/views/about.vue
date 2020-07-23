@@ -9,11 +9,20 @@ export default {
 </script>
 
 <template>
-  <div>
-    About
-  </div>
+  <section class="section-margin">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6">
+          <BaseForm />
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
-<style lang="scss" module>
+<style lang="scss" scoped>
 @import '@design';
+.section-margin {
+  padding: 70px 0;
+}
 </style>
