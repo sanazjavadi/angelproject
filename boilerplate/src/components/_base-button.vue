@@ -16,11 +16,23 @@ export default {
         return ['darkbtn', 'lightbtn'].includes(v)
       },
     },
-
     icon: {
       type: String,
       default: '',
       description: 'button icon',
+    },
+    size: {
+      type: String,
+      default: null,
+      description: 'Button size lg|sm',
+      validator: (v) => {
+        return ['lg', 'sm', 'block', null].includes(v)
+      },
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
+      description: ' Whether it should be displayed as disabled, or not.',
     },
   },
   computed: {
@@ -31,10 +43,13 @@ export default {
         return 'button'
       }
     },
+    sizeClasses() {
+      return this.size ? `btn-${this.size}` : 'btn'
+    },
   },
   methods: {
-    handleClick(evt) {
-      this.$emit('click', evt)
+    handleClick(e) {
+      this.$emit('click', e)
     },
   },
 }
@@ -44,8 +59,8 @@ export default {
   <component
     :is="type"
     :href="href"
-    class="btn"
-    :class="['btn', theme]"
+    :class="[sizeClasses, theme]"
+    :disabled="disabled"
     @click="handleClick"
   >
     <slot />
@@ -57,52 +72,53 @@ export default {
 
 .btn {
   font-weight: 700;
-
   min-width: 150px;
   outline: none;
+  appearance: none;
   border: none;
   border: 1px solid transparent;
   padding: 0 1rem;
   font-size: 1rem;
-
   vertical-align: middle;
   height: 50px;
   border-radius: 0.3rem;
   display: inline-block;
-  transition: all 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
   cursor: pointer;
-  transition: background-color 1s ease;
-  &:hover {
-    animation: rainbow 3s ease;
+  transition: all 0.5s linear;
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    &:hover {
+      animation: none;
+    }
   }
 }
 .darkbtn {
   @extend .btn;
   color: white;
   background-color: $dark-blue;
+  &:hover {
+    background: darken($dark-blue, 7px);
+  }
 }
 .lightbtn {
   @extend .btn;
   color: $dark-blue;
   background-color: $light-blue;
+  &:hover {
+    background: darken($light-blue, 7px);
+  }
 }
-
-@keyframes rainbow {
-  0% {
-    background-color: $light-blue;
-  }
-  25% {
-    background-color: pink;
-  }
-  50% {
-    background-color: purple;
-  }
-  75% {
-    background-color: rgb(214, 152, 214);
-  }
-
-  100% {
-    background-color: $dark-blue;
-  }
+.btn-lg {
+  @extend .btn;
+  padding: 0 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+.btn-block {
+  @extend .btn;
+  width: 100%;
 }
 </style>

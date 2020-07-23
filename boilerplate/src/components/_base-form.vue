@@ -8,7 +8,7 @@ export default {}
     <BaseInput placeholder="نام خانوادگی" class="mt-2" />
     <BaseInput placeholder="آدرس ایمیل" class="mt-2" />
     <BaseInput placeholder="کلمه عبور" class="mt-2" />
-    <baseButton class="mt-2">
+    <baseButton class="mt-2" size="block" :disabled="true">
       ایجاد حساب کاربری
     </baseButton>
   </div>

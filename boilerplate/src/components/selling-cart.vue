@@ -40,7 +40,7 @@ export default {
         </h4>
       </div>
 
-      <BaseButton>
+      <BaseButton size="lg">
         می خوام به برآوردن این آرزو کمک کنم
       </BaseButton>
     </div>
@@ -85,7 +85,7 @@ export default {
 
   .lower-content {
     position: relative;
-    padding: 0 30px 0;
+    padding: 0 20px 0;
     .avatar {
       width: 70px;
       height: 70px;
