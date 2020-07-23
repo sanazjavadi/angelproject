@@ -55,7 +55,6 @@ export default {
 @import '@design';
 
 .btn {
-  color: white;
   font-size: 13px;
   font-weight: 800;
   outline: none;
@@ -71,10 +70,12 @@ export default {
 }
 .darkbtn {
   @extend .btn;
+  color: white;
   background-color: $dark-blue;
 }
 .lightbtn {
   @extend .btn;
+  color: $dark-blue;
   background-color: $light-blue;
 }
 

@@ -5,12 +5,13 @@ import welcome from '@layouts/home/welcome.vue'
 import about from '@layouts/home/about.vue'
 import dreamSection from '@layouts/home/dream-section.vue'
 import countUpSection from '@layouts/home/countup-vue.vue'
+import help from '@layouts/help.vue'
 export default {
   page: {
     title: 'Home',
     meta: [{ name: 'description', content: appConfig.description }],
   },
-  components: { banner, about, dreamSection, countUpSection, welcome },
+  components: { banner, about, dreamSection, countUpSection, welcome, help },
 }
 </script>
 
@@ -21,6 +22,7 @@ export default {
     <welcome />
     <dreamSection />
     <countUpSection />
+    <help />
   </div>
 </template>
 

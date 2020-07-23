@@ -302,11 +302,9 @@
       max-width: 90%;
       margin-right: auto;
       margin-left: auto;
-      font-size: 0.875rem;
       -webkit-box-flex: 1;
       -ms-flex-positive: 1;
       flex-grow: 1;
-      line-height: 3em;
     }
     .after {
       &::after {

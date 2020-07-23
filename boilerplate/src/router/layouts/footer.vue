@@ -88,7 +88,7 @@ export default {
                       >
                     </ul>
                     <div class="mt-3">
-                      <BaseButton>
+                      <BaseButton theme="lightbtn">
                         تماس با ما
                       </BaseButton>
                     </div>
