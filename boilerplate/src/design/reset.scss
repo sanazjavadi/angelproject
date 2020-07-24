@@ -1,3 +1,33 @@
+// ===
+// Base element styles
+// ===
+
+a,
+a:visited {
+  color: darken($dark-blue, 10px);
+}
+
+h1 {
+  @extend %typography-xxlarge;
+}
+
+h2 {
+  @extend %typography-xlarge;
+}
+
+h3 {
+  @extend %typography-large;
+}
+
+h4 {
+  @extend %typography-medium;
+}
+
+h5,
+h6 {
+  @extend %typography-small;
+}
+
 ul {
   list-style: none;
   margin: 0;

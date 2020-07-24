@@ -55,42 +55,7 @@ body {
   font-family: 'Samim', sans-serif;
 }
 #app {
-  @extend %typography-small;
   direction: rtl;
   overflow-x: hidden;
 }
-
-// ===
-// Base element styles
-// ===
-
-a,
-a:visited {
-  color: black;
-}
-
-h1 {
-  @extend %typography-xxlarge;
-}
-
-h2 {
-  @extend %typography-xlarge;
-}
-
-h3 {
-  @extend %typography-large;
-}
-
-h4 {
-  @extend %typography-medium;
-}
-
-h5,
-h6 {
-  @extend %typography-small;
-}
-
-// ===
-// Vendor
-// ===
 </style>

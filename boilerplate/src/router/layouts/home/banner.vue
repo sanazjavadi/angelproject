@@ -1,7 +1,7 @@
 <script>
-import modal from '@components/modal.vue'
+import signUp from '@layouts/Authorization/signup.vue'
 export default {
-  components: { modal },
+  components: { signUp },
   data() {
     return {
       ThirdCluodPosition: 2086.75,
@@ -62,38 +62,7 @@ export default {
       </div>
     </div>
 
-    <modal v-if="showModal">
-      <template v-slot:close>
-        <BaseCloseButton @click="toggleModal" />
-      </template>
-      <section class="mt-5 pt-5">
-        <div class="container">
-          <div class="row justify-content-center">
-            <div class="col-lg-5">
-              <BaseForm>
-                <template v-slot:header>
-                  عضویت
-                </template>
-                <template v-slot:body>
-                  <BaseInput placeholder="نام" class="mb-3" />
-                  <BaseInput placeholder="نام خانوادگی" class="mb-3" />
-                  <BaseInput placeholder="آدرس ایمیل" class="mb-3" />
-                  <BaseInput placeholder="کلمه عبور" class="mb-3" />
-                  <baseButton class="mb-3" size="block">
-                    ایجاد حساب کاربری
-                  </baseButton>
-                </template>
-
-                <template v-slot:footer>
-                  قبلا عضو شدی؟
-                  <span>ورود</span>
-                </template>
-              </BaseForm>
-            </div>
-          </div>
-        </div>
-      </section>
-    </modal>
+    <sign-up v-if="showModal"> </sign-up>
   </section>
 </template>
 
