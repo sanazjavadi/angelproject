@@ -12,6 +12,7 @@ export default {
   mounted() {
     this.changebackgroundPos()
   },
+
   methods: {
     changebackgroundPos() {
       setInterval(() => {
@@ -20,8 +21,7 @@ export default {
       }, 100)
     },
     toggleModal() {
-      this.showModal = true
-      console.log(this.showModal)
+      this.showModal = !this.showModal
     },
   },
 }
@@ -57,30 +57,42 @@ export default {
             می خوام کمک کنم
           </baseButton>
 
-          <baseButton class="mt-3 ml-3" @click="toggleModal">
-            وارد شو
-          </baseButton>
+          <baseButton class="mt-3 ml-3" @click="toggleModal"> ورود </baseButton>
         </div>
       </div>
     </div>
 
     <modal v-if="showModal">
-      <div class="col-lg-5">
-        <BaseForm>
-          <template v-slot:header>
-            عضویت
-          </template>
-          <template v-slot:body>
-            <BaseInput placeholder="نام" class="mb-3" />
-            <BaseInput placeholder="نام خانوادگی" class="mb-3" />
-            <BaseInput placeholder="آدرس ایمیل" class="mb-3" />
-            <BaseInput placeholder="کلمه عبور" class="mb-3" />
-            <baseButton class="mb-3" size="block">
-              ایجاد حساب کاربری
-            </baseButton>
-          </template>
-        </BaseForm>
-      </div>
+      <template v-slot:close>
+        <BaseCloseButton @click="toggleModal" />
+      </template>
+      <section class="mt-5 pt-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-5">
+              <BaseForm>
+                <template v-slot:header>
+                  عضویت
+                </template>
+                <template v-slot:body>
+                  <BaseInput placeholder="نام" class="mb-3" />
+                  <BaseInput placeholder="نام خانوادگی" class="mb-3" />
+                  <BaseInput placeholder="آدرس ایمیل" class="mb-3" />
+                  <BaseInput placeholder="کلمه عبور" class="mb-3" />
+                  <baseButton class="mb-3" size="block">
+                    ایجاد حساب کاربری
+                  </baseButton>
+                </template>
+
+                <template v-slot:footer>
+                  قبلا عضو شدی؟
+                  <span>ورود</span>
+                </template>
+              </BaseForm>
+            </div>
+          </div>
+        </div>
+      </section>
     </modal>
   </section>
 </template>
