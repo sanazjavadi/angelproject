@@ -13,46 +13,17 @@ export default {
 
 <template>
   <footer class="main-footer mt-5 pt-5">
-    <div
-      class="parallax-scene parallax-scene-7 anim-icons"
-      style="transform: translate3d(0px, 0px, 0px) rotate(0.0001deg); transform-style: preserve-3d; backface-visibility: hidden; pointer-events: none;"
-    >
-      <span
-        data-depth="0.60"
-        class="parallax-layer icon icon-sun-gray"
-        style="transform: translate3d(-5.2px, -36.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: relative; display: block; left: 0px; top: 0px;"
-      ></span>
-      <span
-        data-depth="0.60"
-        class="parallax-layer icon icon-star-gray"
-        style="transform: translate3d(-5.2px, -36.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"
-      ></span>
-      <span
-        data-depth="0.60"
-        class="parallax-layer icon icon-star-gray-2"
-        style="transform: translate3d(-5.2px, -36.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"
-      ></span>
-      <span
-        data-depth="0.60"
-        class="parallax-layer icon icon-star-gray-3"
-        style="transform: translate3d(-5.2px, -36.5px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"
-      ></span>
-      <span
-        data-depth="0.40"
-        class="parallax-layer icon icon-balloon-gray"
-        style="transform: translate3d(-3.4px, -24.3px, 0px); transform-style: preserve-3d; backface-visibility: hidden; position: absolute; display: block; left: 0px; top: 0px;"
-      ></span>
-    </div>
-
     <!--footer upper-->
     <div class="footer-upper">
       <div class="container-fluid">
         <div class="row  justify-content-center">
           <!--Big Column-->
-          <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12">
+          <div class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-11 col-11">
             <div class="row ">
               <!--Footer Column-->
-              <div class="footer-column col-lg-6 col-md-6 col-sm-12 m-auto">
+              <div
+                class="footer-column col-lg-6 col-md-6 col-sm-11 col-11 m-auto"
+              >
                 <div class="footer-widget logo-widget">
                   <h4 class="widget-title">درباره ما</h4>
                   <div class="text"
@@ -71,13 +42,15 @@ export default {
 
           <!--Big Column-->
           <div
-            class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-12 mt-4 mt-lg-0"
+            class="big-column col-xl-6 col-lg-12 col-md-12 col-sm-11 col-11 mt-4 mt-lg-0"
           >
             <div class="row clearfix">
               <!--Footer Column-->
 
               <!--Footer Column-->
-              <div class="footer-column col-lg-6 col-md-6 col-sm-12 m-auto">
+              <div
+                class="footer-column col-lg-6 col-md-6 col-sm-11 col-11 m-auto"
+              >
                 <div class="footer-widget contact-widget">
                   <h4 class="widget-title">تماس با ما</h4>
                   <div class="widget-content">
@@ -165,59 +138,6 @@ export default {
   background-color: $dark-blue;
 }
 
-.main-footer .anim-icons .icon {
-  opacity: 0.08;
-}
-.main-footer .icon-balloon-gray {
-  left: auto !important;
-  right: -360px !important;
-  top: 80px !important;
-  bottom: auto !important;
-}
-.main-footer .icon-sun-gray {
-  left: -250px !important;
-  top: 190px !important;
-}
-.main-footer .icon-star-gray {
-  top: 50px !important;
-  left: 280px !important;
-}
-.main-footer .icon-star-gray-2 {
-  left: -25px !important;
-  top: auto !important;
-  bottom: 210px !important;
-}
-.main-footer .icon-star-gray-3 {
-  left: auto !important;
-  right: -100px !important;
-  bottom: 185px !important;
-  top: auto !important;
-}
-.icon-sun-gray {
-  height: 52px;
-  width: 98px;
-  background-image: url('http://t.commonsupport.xyz/gaowa/images/icons/icon-sun-gray.png');
-}
-.icon-star-gray {
-  height: 51px;
-  width: 43px;
-  background-image: url('http://t.commonsupport.xyz/gaowa/images/icons/icon-star-gray.png');
-}
-.icon-star-gray-2 {
-  height: 19px;
-  width: 15px;
-  background-image: url('http://t.commonsupport.xyz/gaowa/images/icons/icon-star-gray-2.png');
-}
-.icon-star-gray-3 {
-  height: 27px;
-  width: 31px;
-  background-image: url('http://t.commonsupport.xyz/gaowa/images/icons/icon-star-gray-3.png');
-}
-.icon-balloon-gray {
-  height: 277px;
-  width: 217px;
-  background-image: url('http://t.commonsupport.xyz/gaowa/images/icons/icon-balloon-gray.png');
-}
 .main-footer .footer-upper {
   position: relative;
   background-position: center;

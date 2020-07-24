@@ -93,20 +93,14 @@ export default {
   span,
   h2 {
     text-align: center;
-    color: $dark-blue;
+    color: $header-color;
   }
   span {
     font-size: 30px;
     font-weight: 400;
   }
   h2 {
-    font-size: 45px;
-    line-height: 4rem;
-    font-weight: 800;
-    @media (max-width: 768px) {
-      font-size: 28px;
-      line-height: 2.5rem;
-    }
+    @extend %font-heading;
   }
 }
 </style>
