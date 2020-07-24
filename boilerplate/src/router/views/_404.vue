@@ -1,12 +1,10 @@
 <script>
-import Layout from '@layouts/main.vue'
-
 export default {
   page: {
     title: '404',
     meta: [{ name: 'description', content: '404' }],
   },
-  components: { Layout },
+  components: {},
   props: {
     resource: {
       type: String,
@@ -17,7 +15,7 @@ export default {
 </script>
 
 <template>
-  <Layout>
+  <div>
     <h1 :class="$style.title">
       404
       <template v-if="resource">
@@ -25,7 +23,7 @@ export default {
       </template>
       Not Found
     </h1>
-  </Layout>
+  </div>
 </template>
 
 <style lang="scss" module>

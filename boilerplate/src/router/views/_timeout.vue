@@ -1,6 +1,5 @@
 <script>
 import axios from 'axios'
-import Layout from '@layouts/main.vue'
 import LoadingView from './_loading.vue'
 
 export default {
@@ -10,7 +9,7 @@ export default {
       { name: 'description', content: 'The page timed out while loading.' },
     ],
   },
-  components: { Layout, LoadingView },
+  components: { LoadingView },
   data() {
     return {
       offlineConfirmed: false,
@@ -30,12 +29,12 @@ export default {
 </script>
 
 <template>
-  <Layout v-if="offlineConfirmed">
+  <div v-if="offlineConfirmed">
     <h1 :class="$style.title">
       The page timed out while loading. Are you sure you're still connected to
       the Internet?
     </h1>
-  </Layout>
+  </div>
   <LoadingView v-else />
 </template>
 
