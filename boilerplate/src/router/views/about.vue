@@ -18,12 +18,8 @@ export default {
               عضویت
             </template>
             <template v-slot:body>
-              <BaseInput placeholder="نام" class="mb-3" :state="true" />
-              <BaseInput
-                placeholder="نام خانوادگی"
-                class="mb-3"
-                :state="false"
-              />
+              <BaseInput placeholder="نام" class="mb-3" />
+              <BaseInput placeholder="نام خانوادگی" class="mb-3" />
               <BaseInput placeholder="آدرس ایمیل" class="mb-3" />
               <BaseInput placeholder="کلمه عبور" class="mb-3" />
               <baseButton class="mb-3" size="block">

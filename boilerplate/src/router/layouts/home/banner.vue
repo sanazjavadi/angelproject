@@ -1,9 +1,12 @@
 <script>
+import modal from '@components/modal.vue'
 export default {
+  components: { modal },
   data() {
     return {
       ThirdCluodPosition: 2086.75,
       secondCloudPosition: -4173.5,
+      showModal: false,
     }
   },
   mounted() {
@@ -15,6 +18,10 @@ export default {
         this.ThirdCluodPosition += 2
         this.secondCloudPosition -= 2
       }, 100)
+    },
+    toggleModal() {
+      this.showModal = true
+      console.log(this.showModal)
     },
   },
 }
@@ -50,10 +57,31 @@ export default {
             می خوام کمک کنم
           </baseButton>
 
-          <baseButton class="mt-3 ml-3"> وارد شو </baseButton>
+          <baseButton class="mt-3 ml-3" @click="toggleModal">
+            وارد شو
+          </baseButton>
         </div>
       </div>
     </div>
+
+    <modal v-if="showModal">
+      <div class="col-lg-5">
+        <BaseForm>
+          <template v-slot:header>
+            عضویت
+          </template>
+          <template v-slot:body>
+            <BaseInput placeholder="نام" class="mb-3" />
+            <BaseInput placeholder="نام خانوادگی" class="mb-3" />
+            <BaseInput placeholder="آدرس ایمیل" class="mb-3" />
+            <BaseInput placeholder="کلمه عبور" class="mb-3" />
+            <baseButton class="mb-3" size="block">
+              ایجاد حساب کاربری
+            </baseButton>
+          </template>
+        </BaseForm>
+      </div>
+    </modal>
   </section>
 </template>
 
