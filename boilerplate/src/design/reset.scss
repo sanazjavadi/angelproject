@@ -13,6 +13,10 @@ button {
   outline: none;
   -moz-appearance: none;
   -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border: none;
   display: inline-block;
   vertical-align: middle;

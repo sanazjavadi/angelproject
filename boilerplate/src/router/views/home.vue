@@ -28,7 +28,4 @@ export default {
 
 <style lang="scss" scoped>
 @import '@design';
-.container-fluid {
-  padding: 0;
-}
 </style>

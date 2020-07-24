@@ -9,27 +9,28 @@ export default {
 
 <template>
   <section class="sec-dream">
-    <div class="sec-title text-center">
-      <h2>
-        لیست آرزوهای بچه ها
-        <br />
-        رو ببین و هر کدوم رو خواستی برآورده کن
-      </h2>
+    <div class="row justify-content-center">
+      <div class="col-10 col-lg-6 sec-title text-center m-auto">
+        <h2>
+          لیست آرزوهای بچه ها رو ببین و هر کدوم رو خواستی برآورده کن
+        </h2>
+      </div>
     </div>
-    <div class="container-fluid">
+
+    <div class="container-fluid mt-5">
       <div class="row justify-content-center no-gutters">
         <div
-          class="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-end"
+          class="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-lg-end justify-content-center"
         >
           <sellignCart />
         </div>
         <div
-          class="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-center"
+          class="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-lg-center justify-content-center"
         >
           <sellignCart />
         </div>
         <div
-          class="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-start"
+          class="col-lg-4 col-md-6 col-sm-7 col-xs-9 col-11 d-flex justify-content-lg-start justify-content-center"
         >
           <sellignCart />
         </div>
@@ -40,19 +41,13 @@ export default {
 
 <style lang="scss" scoped>
 @import '@design';
-.container-fluid {
-  padding: 0 !important;
-}
+
 .sec-dream {
-  position: relative;
-  padding: 80px 0 90px;
+  padding: $section-padding-lg;
   background-color: #f2f5f6;
 }
 .sec-title h2 {
-  display: block;
+  @extend %font-heading;
   color: $dark-blue;
-  font-weight: 700;
-  padding-bottom: 70px;
-  line-height: 5rem;
 }
 </style>
