@@ -1,9 +1,11 @@
 <script>
 export default {
+  name: 'BaseButton',
   props: {
     href: {
       type: String,
       default: null,
+      description: 'Button tag (default -> button)',
     },
     to: {
       type: String,
@@ -12,6 +14,7 @@ export default {
     theme: {
       type: String,
       default: 'darkbtn',
+      description: 'the theme style',
       validator(v) {
         return ['darkbtn', 'lightbtn'].includes(v)
       },
@@ -64,6 +67,10 @@ export default {
     @click="handleClick"
   >
     <slot />
+
+    <span v-if="icon">
+      <slot name="icon"> </slot>
+    </span>
   </component>
 </template>
 
@@ -71,26 +78,18 @@ export default {
 @import '@design';
 
 .btn {
-  font-weight: 700;
+  font-weight: $butten-font-weight;
   min-width: 150px;
-  outline: none;
-  appearance: none;
-  border: none;
-  border: 1px solid transparent;
-  padding: 0 1rem;
-  font-size: 1rem;
-  vertical-align: middle;
+  border: $size-button-border solid transparent;
+  padding: $size-button-padding;
+  font-size: $button-font-size;
   height: 50px;
-  border-radius: 0.3rem;
-  display: inline-block;
-  cursor: pointer;
+  line-height: $button-line-height;
+  border-radius: $size-button-border-radius;
   transition: all 0.5s linear;
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
-    &:hover {
-      animation: none;
-    }
   }
 }
 .darkbtn {
@@ -112,10 +111,6 @@ export default {
 .btn-lg {
   @extend .btn;
   padding: 0 1.5rem;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 500;
-  border-radius: 0.5rem;
 }
 .btn-block {
   @extend .btn;

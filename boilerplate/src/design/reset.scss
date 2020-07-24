@@ -8,4 +8,15 @@ a {
 }
 button {
   cursor: pointer;
+  -moz-outline: none;
+  -webkit-appearance: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+.container-fluid {
+  padding: 0;
 }
