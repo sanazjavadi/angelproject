@@ -1,0 +1,25 @@
+// GRID
+$size-grid-padding: 1.3rem;
+
+// CONTENT
+$size-content-width-max: 50rem;
+$size-content-width-min: 25rem;
+
+// INPUTS
+$size-input-padding-vertical: 1.5rem;
+$size-input-padding-horizontal: 1rem;
+$size-input-padding: $size-input-padding-vertical $size-input-padding-horizontal;
+$size-input-border: 1px;
+$size-input-border-radius: 0.375rem;
+
+// BUTTONS
+$size-button-padding-vertical: 0;
+$size-button-padding-horizontal: 1rem;
+$size-button-border: 1px;
+$size-button-border-radius: 0.375rem;
+$size-button-padding: $size-button-padding-vertical
+  $size-button-padding-horizontal;
+
+//Section
+$section-padding-lg: 6.75rem 0;
+$section-padding-sm: 3.125rem 0;

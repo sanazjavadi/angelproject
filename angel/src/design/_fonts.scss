@@ -1,0 +1,44 @@
+$system-default-font-family: 'Samim';
+
+//Header
+$heading-font-family: $system-default-font-family;
+$heading-font-weight: 900;
+$heading-font-size: 2.1875rem;
+$heading-font-padding: 2rem;
+$heading-font-line-height: 4.5rem;
+$heading-font-size-sm: 2rem;
+
+//content
+$content-font-family: $system-default-font-family;
+$content-font-weight: 400;
+$content-font-size: 0.875rem;
+$content-line-height: 2.5em;
+
+//Inputs
+$input-font-size: 0.95rem;
+$input-line-height: 1.5;
+$input-font-weight: 300;
+
+//Buttens
+$butten-font-weight: 700;
+$button-font-size: 1rem;
+$button-line-height: 1.5;
+
+%font-heading {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  font-size: $heading-font-size;
+  padding-bottom: $heading-font-padding;
+  line-height: $heading-font-line-height;
+  @media (max-width: 768px) {
+    font-size: $heading-font-size / 1.4;
+    line-height: $heading-font-line-height / 1.3;
+  }
+}
+
+%font-content {
+  font-family: $content-font-family;
+  font-weight: $content-font-weight;
+  font-size: $content-font-size;
+  line-height: $content-line-height;
+}

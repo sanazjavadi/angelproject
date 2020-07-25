@@ -1,0 +1,56 @@
+// ===
+// Base element styles
+// ===
+
+a,
+a:visited {
+  color: darken($dark-blue, 10px);
+}
+
+h1 {
+  @extend %typography-xxlarge;
+}
+
+h2 {
+  @extend %typography-xlarge;
+}
+
+h3 {
+  @extend %typography-large;
+}
+
+h4 {
+  @extend %typography-medium;
+}
+
+h5,
+h6 {
+  @extend %typography-small;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  -moz-outline: none;
+  -webkit-appearance: none;
+  outline: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: none;
+  display: inline-block;
+  vertical-align: middle;
+}
+.container-fluid {
+  padding: 0;
+}
