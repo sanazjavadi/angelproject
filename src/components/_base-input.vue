@@ -43,6 +43,16 @@ export default {
       },
       description: 'Input state. eg: valid | invalid',
     },
+    icon: {
+      type: String,
+      default: 'times-circle',
+      description: 'Input icon',
+    },
+  },
+  data() {
+    return {
+      iconn: null,
+    }
   },
   computed: {
     computedState() {
@@ -64,34 +74,42 @@ export default {
       return null
     },
   },
+  watch: {
+    value(newVal) {
+      this.getValue(newVal)
+    },
+  },
+  mounted() {
+    if (this.value) {
+      this.getValue(this.value)
+    }
+  },
   methods: {
-    setValue(value) {
-      this.$emit('input', value)
+    getValue(e) {
+      this.$emit('input', e)
     },
-    onInput(e) {
-      this.setValue(e.target.value)
-    },
-    onChange(e) {
-      this.setValue(e.target.value)
-      this.$emit('change', e.target.value)
+    handleIcon(e) {
+      this.$emit('click', e)
     },
   },
 }
 </script>
 
 <template>
-  <div>
+  <div class="wrapper-input">
     <input
       :type="type"
       :value="value"
       :placeholder="placeholder"
       v-bind="$attrs"
-      :change="onChange"
       :class="['form-control', computedStateClass]"
       :dir="[align ? 'ltr' : 'rtl']"
-      @input="onInput"
+      @input="getValue($event.target.value)"
     />
-    <slot />
+
+    <span v-if="icon" @click="handleIcon">
+      <i :class="['fas', `fa-${icon}`, 'leftIcon']"></i>
+    </span>
 
     <span v-if="error"></span>
   </div>
@@ -99,6 +117,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '@design';
+.wrapper-input {
+  position: relative;
+}
 .form-control {
   padding: $size-input-padding;
   font-size: $input-font-size;
@@ -126,6 +147,17 @@ export default {
   border-color: $input-error-color;
   &:focus {
     border: $size-input-border solid darken($input-error-color, 10px);
+  }
+}
+.leftIcon {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  i {
+    color: $light-blue;
+    cursor: pointer;
+    z-index: 20;
   }
 }
 </style>

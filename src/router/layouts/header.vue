@@ -63,7 +63,7 @@ export default {
       <div class="col-lg-6 d-flex justify-content-center">
         <ul :class="[{ scrolled: minimizeHeader }, 'header']">
           <div v-if="minimizeHeader" class="minimize-icon">
-            <BaseLogo width="40" height="40" />
+            <BaseLogo :width="40" :height="40" />
           </div>
           <li
             v-for="(item, index) in items"

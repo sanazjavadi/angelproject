@@ -5,6 +5,24 @@ export default {
     meta: [{ name: 'description', content: 'The About page.' }],
   },
   components: {},
+  data() {
+    return {
+      password: '',
+      type: 'password',
+      passwordIcon: 'eye-slash',
+    }
+  },
+  methods: {
+    toggleVisibility() {
+      if (this.passwordIcon === 'eye-slash' && this.type === 'password') {
+        this.passwordIcon = 'eye'
+        this.type = 'text'
+      } else {
+        this.type = 'password'
+        this.passwordIcon = 'eye-slash'
+      }
+    },
+  },
 }
 </script>
 
@@ -20,8 +38,15 @@ export default {
             <template v-slot:body>
               <BaseInput placeholder="نام" class="mb-3" />
               <BaseInput placeholder="نام خانوادگی" class="mb-3" />
-              <BaseInput placeholder="آدرس ایمیل" class="mb-3" />
-              <BaseInput placeholder="کلمه عبور" class="mb-3" />
+              <BaseInput placeholder="آدرس ایمیل" class="mb-3" type="email" />
+              <BaseInput
+                v-model="password"
+                placeholder="کلمه عبور"
+                class="mb-3"
+                :icon="passwordIcon"
+                :type="type"
+                @click="toggleVisibility"
+              />
               <baseButton class="mb-3" size="block">
                 ایجاد حساب کاربری
               </baseButton>
