@@ -17,7 +17,7 @@ export default {}
 <style lang="scss" scoped>
 @import '@design';
 .form-card {
-  padding: 32px;
+  padding: 25px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 10px 24px 0 rgba(20, 47, 82, 0.12),

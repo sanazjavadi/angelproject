@@ -17,24 +17,24 @@ export default {
   <section class="mt-5 pt-5">
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-lg-5 col-md-6 col-sm-8 col-10">
+        <div class="col-lg-5 col-md-8 col-sm-10 col-12">
           <BaseForm>
             <template v-slot:header>
               عضویت
             </template>
             <template v-slot:body>
-              <BaseInput placeholder="نام" class="mb-3" />
-              <BaseInput placeholder="نام خانوادگی" class="mb-3" />
-              <BaseInput placeholder=" شماره موبایل" class="mb-3" />
-              <BaseInput placeholder="آدرس ایمیل" class="mb-3" />
-              <BaseInput placeholder="کلمه عبور" class="mb-3" />
+              <BaseInput placeholder="نام" class="mb-2" />
+              <BaseInput placeholder="نام خانوادگی" class="mb-2" />
+              <BaseInput placeholder=" شماره موبایل" class="mb-2" />
+              <BaseInput placeholder="آدرس ایمیل" class="mb-2" />
+              <BaseInput placeholder="کلمه عبور" class="mb-2" />
               <baseButton class="mb-3" size="block">
                 ایجاد حساب کاربری
               </baseButton>
             </template>
 
             <template v-slot:footer>
-              <div class="footer-form text-center pt-3">
+              <div class="footer-form text-center">
                 قبلا عضو شدی؟
                 <a
                   href="#"
@@ -47,8 +47,10 @@ export default {
           </BaseForm>
         </div>
       </div>
-      <div class="row justify-content-center mt-3">
-        <div class="col-lg-3 d-flex justify-content-around">
+      <div class="row justify-content-center mt-3 pb-2">
+        <div
+          class="col-lg-3 col-md-4 col-sm-5 col-6 d-flex justify-content-around"
+        >
           <div class="social-login">
             <img
               src="https://www.ceviz.io/static/google-logo-3f3dbee38e0e229df60c33e98ae0186d.png"
