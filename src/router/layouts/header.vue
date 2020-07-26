@@ -1,5 +1,8 @@
 <script>
+import hamburgerMenu from '@layouts/hamburger-menu.vue'
+
 export default {
+  components: { hamburgerMenu },
   data() {
     return {
       items: [
@@ -27,6 +30,7 @@ export default {
       ],
       selected: 'home',
       minimizeHeader: false,
+      hamburgerMenu: false,
     }
   },
   computed: {
@@ -38,6 +42,14 @@ export default {
   mounted() {
     window.addEventListener('scroll', this.handleMinimizeHeader)
     this.setRouteParams()
+    window.addEventListener('resize', () => {
+      const width = window.innerWidth
+      if (width < 680) {
+        this.hamburgerMenu = true
+      } else {
+        this.hamburgerMenu = false
+      }
+    })
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleMinimizeHeader)
@@ -64,34 +76,42 @@ export default {
 </script>
 
 <template>
-  <div class="container-fluid ">
-    <div class="row justify-content-center pt-3 pb-3">
-      <div class="col-lg-4 d-flex justify-content-center">
-        <BaseLogo />
+  <fragment>
+    <!-- hamburger menu navigation -->
+    <hamburger-menu v-if="hamburgerMenu" />
+
+    <!-- default navigation -->
+
+    <div v-if="!hamburgerMenu" class="container-fluid ">
+      <div class="row justify-content-center pt-3 pb-3">
+        <div class="col-lg-4 d-flex justify-content-center">
+          <BaseLogo />
+        </div>
       </div>
-    </div>
-    <div class="row justify-content-center mt-2">
-      <div class="col-lg-6 d-flex justify-content-center">
-        <ul :class="[{ scrolled: minimizeHeader }, 'header']">
-          <div v-if="minimizeHeader" class="minimize-icon">
-            <BaseLogo :width="40" :height="40" />
-          </div>
-          <li
-            v-for="(item, index) in items"
-            :key="index"
-            @click="activeItem(item.link)"
-          >
-            <router-link
-              :to="{ name: `${item.link}` }"
-              :style="isActive(item.link)"
+
+      <div class="row justify-content-center mt-2">
+        <div class="col-lg-6 d-flex justify-content-center">
+          <ul :class="[{ scrolled: minimizeHeader }, 'header']">
+            <div v-if="minimizeHeader" class="minimize-icon">
+              <BaseLogo :width="40" :height="40" />
+            </div>
+            <li
+              v-for="(item, index) in items"
+              :key="index"
+              @click="activeItem(item.link)"
             >
-              {{ item.title }}
-            </router-link>
-          </li>
-        </ul>
+              <router-link
+                :to="{ name: `${item.link}` }"
+                :style="isActive(item.link)"
+              >
+                {{ item.title }}
+              </router-link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
+  </fragment>
 </template>
 
 <style lang="scss" scoped>

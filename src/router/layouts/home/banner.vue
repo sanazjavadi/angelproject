@@ -90,6 +90,9 @@ export default {
     background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds2.png');
     border-bottom: 10px solid white;
     top: 600px;
+    @media (max-width: 680px) {
+      top: 500px;
+    }
   }
   #clouds3 {
     margin-top: -30px;
@@ -98,6 +101,9 @@ export default {
     transition: all 0.2s linear;
     top: 600px;
     background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds3.png');
+    @media (max-width: 680px) {
+      top: 500px;
+    }
   }
   .clouds {
     position: absolute;
@@ -105,6 +111,9 @@ export default {
     height: 120px;
     left: 0px;
     top: 600px;
+    @media (max-width: 680px) {
+      top: 500px;
+    }
   }
   margin-top: 5rem;
   span,

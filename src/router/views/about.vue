@@ -35,6 +35,9 @@ export default {
   height: 120px;
   left: 0px;
   top: 450px;
+  @media (max-width: 680px) {
+    top: 300px;
+  }
 }
 #clouds1 {
   margin-top: -14px;
@@ -49,5 +52,8 @@ export default {
   background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds2.png');
   border-bottom: 10px solid white;
   top: 450px;
+  @media (max-width: 680px) {
+    top: 300px;
+  }
 }
 </style>
