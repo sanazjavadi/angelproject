@@ -45,7 +45,7 @@ export default {
     },
     icon: {
       type: String,
-      default: 'times-circle',
+      default: null,
       description: 'Input icon',
     },
   },

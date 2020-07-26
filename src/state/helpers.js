@@ -1,4 +1,4 @@
-import { mapState, mapGetters, mapActions } from 'vuex'
+import { mapState, mapGetters, mapActions, mapMutations } from 'vuex'
 
 export const authComputed = {
   ...mapState('auth', {
@@ -6,5 +6,8 @@ export const authComputed = {
   }),
   ...mapGetters('auth', ['loggedIn']),
 }
+
+export const utilityState = mapState('utility', ['showModal', 'authForm'])
+export const utilityMutations = mapMutations('utility', ['toggleModal'])
 
 export const authMethods = mapActions('auth', ['logIn', 'logOut'])
