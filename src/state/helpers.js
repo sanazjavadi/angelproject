@@ -8,6 +8,9 @@ export const authComputed = {
 }
 
 export const utilityState = mapState('utility', ['showModal', 'authForm'])
-export const utilityMutations = mapMutations('utility', ['toggleModal'])
+export const utilityMutations = mapMutations('utility', [
+  'toggleModal',
+  'triggerComponent',
+])
 
 export const authMethods = mapActions('auth', ['logIn', 'logOut'])

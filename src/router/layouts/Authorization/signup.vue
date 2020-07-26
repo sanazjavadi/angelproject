@@ -1,3 +1,18 @@
+<script>
+import { utilityMutations } from '@state/helpers.js'
+export default {
+  data() {
+    return {}
+  },
+  methods: {
+    ...utilityMutations,
+    _triggerComponent() {
+      this.triggerComponent()
+    },
+  },
+}
+</script>
+
 <template>
   <section class="mt-5 pt-5">
     <div class="container">
@@ -21,7 +36,12 @@
             <template v-slot:footer>
               <div class="footer-form text-center pt-3">
                 قبلا عضو شدی؟
-                <a href="#" class="font-weight-bolder">ورود</a>
+                <a
+                  href="#"
+                  class="font-weight-bolder"
+                  @click="_triggerComponent"
+                  >ورود</a
+                >
               </div>
             </template>
           </BaseForm>

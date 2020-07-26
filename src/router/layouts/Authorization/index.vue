@@ -11,12 +11,20 @@ import { utilityState, utilityMutations } from '@state/helpers.js'
 export default {
   components: { modal, signIn, singUp },
   data() {
-    return {
-      authForm: singUp,
-    }
+    return {}
   },
   computed: {
     ...utilityState,
+    changeComponent() {
+      let visibleForm
+      if (this.authForm === 'signIn') {
+        visibleForm = signIn
+      } else {
+        visibleForm = singUp
+      }
+
+      return visibleForm
+    },
   },
   methods: {
     ...utilityMutations,
@@ -32,7 +40,9 @@ export default {
     <template v-slot:close>
       <BaseCloseButton @click="_toggleModal" />
     </template>
-    <component :is="authForm" />
+    <keep-alive>
+      <component :is="changeComponent" />
+    </keep-alive>
   </modal>
 </template>
 
