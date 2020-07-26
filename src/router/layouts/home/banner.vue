@@ -16,7 +16,9 @@ export default {
   mounted() {
     this.changebackgroundPos()
   },
-
+  destroyed() {
+    addEventListener.remove(this.changebackgroundPos())
+  },
   methods: {
     ...utilityMutations,
     changebackgroundPos() {
