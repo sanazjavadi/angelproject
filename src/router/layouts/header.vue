@@ -25,28 +25,39 @@ export default {
           link: '',
         },
       ],
-      selected: 0,
+      selected: 'home',
       minimizeHeader: false,
     }
   },
   computed: {
     isActive() {
-      return (index) =>
-        this.selected === index ? { color: '#172f66' } : { color: '#696478' }
+      return (link) =>
+        this.selected === link ? { color: '#172f66' } : { color: '#696478' }
     },
   },
   mounted() {
-    window.addEventListener('scroll', () => {
+    window.addEventListener('scroll', this.handleMinimizeHeader)
+    this.setRouteParams()
+  },
+  destroyed() {
+    window.removeEventListener('scroll', this.handleMinimizeHeader)
+  },
+  methods: {
+    activeItem(item) {
+      this.selected = item
+    },
+    setRouteParams() {
+      const url = window.location.href
+      const urlArray = url.split('/')
+      const pathName = urlArray[urlArray.length - 1]
+      this.activeItem(pathName)
+    },
+    handleMinimizeHeader() {
       if (Math.round(window.scrollY) > 500) {
         this.minimizeHeader = true
       } else {
         this.minimizeHeader = false
       }
-    })
-  },
-  methods: {
-    activeItem(item) {
-      this.selected = item
     },
   },
 }
@@ -68,11 +79,11 @@ export default {
           <li
             v-for="(item, index) in items"
             :key="index"
-            @click="activeItem(index)"
+            @click="activeItem(item.link)"
           >
             <router-link
               :to="{ name: `${item.link}` }"
-              :style="isActive(index)"
+              :style="isActive(item.link)"
             >
               {{ item.title }}
             </router-link>

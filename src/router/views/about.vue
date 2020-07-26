@@ -34,7 +34,7 @@ export default {
   width: 100%;
   height: 120px;
   left: 0px;
-  top: 400px;
+  top: 450px;
 }
 #clouds1 {
   margin-top: -14px;
@@ -48,6 +48,6 @@ export default {
   transition: all 0.2s linear;
   background-image: url('https://www.typingclub.com/m/tpmedia/img/clouds2.png');
   border-bottom: 10px solid white;
-  top: 400px;
+  top: 450px;
 }
 </style>
