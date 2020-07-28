@@ -1,16 +1,19 @@
 <script>
+import hero from '@layouts/hero.vue'
 export default {
   page: {
     title: 'Contact',
     meta: [{ name: 'description', content: 'The Contact page.' }],
   },
-  components: {},
+  components: { hero },
 }
 </script>
 
 <template>
-  <div>
-    Contact
+  <div class="container-fluid">
+    <hero>
+      تماس با ما
+    </hero>
   </div>
 </template>
 
