@@ -46,7 +46,7 @@ export default {
       class="clouds"
       :style="{ backgroundPositionX: secondCloudPosition + 'px' }"
     ></div>
-    <div class="row justify-content-center">
+    <div class="row justify-content-center banner-title">
       <div
         class="col-lg-6 col-11 d-flex flex-column justify-content-center align-items-center"
       >
@@ -59,11 +59,17 @@ export default {
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10 col-12 d-flex justify-content-center flex-wrap">
-          <baseButton class="mt-3 mr-3" theme="lightbtn">
+          <baseButton
+            class="mt-3 mr-lg-3 mr-md-3 mr-sm-3 mr-1"
+            theme="lightbtn"
+          >
             می خوام کمک کنم
           </baseButton>
 
-          <baseButton class="mt-3 ml-3" @click="_toggleModal">
+          <baseButton
+            class="mt-3 ml-lg-3 ml-md-3 ml-sm-3 ml-1"
+            @click="_toggleModal"
+          >
             ورود
           </baseButton>
         </div>
@@ -121,12 +127,17 @@ export default {
     text-align: center;
     color: $header-color;
   }
-  span {
-    font-size: 30px;
-    font-weight: 400;
-  }
-  h2 {
-    @extend %font-heading;
+  .banner-title {
+    @media (max-width: 680px) {
+      margin-top: 9rem;
+    }
+    span {
+      font-size: 30px;
+      font-weight: 400;
+    }
+    h2 {
+      @extend %font-heading;
+    }
   }
 }
 </style>

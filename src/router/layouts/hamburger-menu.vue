@@ -1,7 +1,14 @@
 <script>
 export default {
+  data() {
+    return {
+      displayMobileMenu: false,
+    }
+  },
   methods: {
-    toggleMenu() {},
+    toggleMenu() {
+      this.displayMobileMenu = true
+    },
   },
 }
 </script>
@@ -21,17 +28,35 @@ export default {
       </div>
     </div>
 
-    <!-- <div class="hamburger-menu">
-      <ul>
+    <div v-if="displayMobileMenu" class="hamburger-menu">
+      <ul @click="displayMobileMenu = false">
         <li>
-          خانه
+          <router-link to="/">
+            خانه
+          </router-link>
         </li>
         <li>
-          چه کارمی کنیم
+          <router-link to="about">
+            چه کار می کنیم
+          </router-link>
         </li>
-        <li> تماس با ما </li>
+        <li>
+          <router-link to="contact">
+            تماس با ما
+          </router-link>
+        </li>
+        <li>
+          <router-link to="explore">
+            فروشگاه مهربانی
+          </router-link>
+        </li>
+        <li>
+          <router-link to="support">
+            حمایت شما
+          </router-link>
+        </li>
       </ul>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -58,10 +83,29 @@ export default {
   }
 }
 .hamburger-menu {
-  position: fixes;
-  width: 100vw;
+  position: fixed;
+  width: 100%;
   height: 80vh;
-  background: #fff;
+  background: $light-blue;
   z-index: 14;
+
+  ul {
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    li {
+      padding: 1.5rem 0;
+      text-align: center;
+      width: 100%;
+      font-weight: 900;
+      font-size: 1rem;
+      color: $dark-blue;
+      &:nth-child(odd) {
+      }
+    }
+  }
 }
 </style>

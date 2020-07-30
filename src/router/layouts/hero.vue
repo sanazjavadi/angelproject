@@ -14,6 +14,9 @@
   margin-top: 5rem;
   @extend %font-heading;
   color: $dark-blue;
+  @media (max-width: 680px) {
+    margin-top: 10rem;
+  }
 }
 .clouds {
   position: absolute;

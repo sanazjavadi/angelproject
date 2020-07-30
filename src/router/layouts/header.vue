@@ -39,17 +39,11 @@ export default {
         this.selected === link ? { color: '#172f66' } : { color: '#696478' }
     },
   },
-  mounted() {
+  created() {
     window.addEventListener('scroll', this.handleMinimizeHeader)
+    window.addEventListener('resize', this.displayHamburgerMenu)
     this.setRouteParams()
-    window.addEventListener('resize', () => {
-      const width = window.innerWidth
-      if (width < 680) {
-        this.hamburgerMenu = true
-      } else {
-        this.hamburgerMenu = false
-      }
-    })
+    this.displayHamburgerMenu()
   },
   destroyed() {
     window.removeEventListener('scroll', this.handleMinimizeHeader)
@@ -69,6 +63,14 @@ export default {
         this.minimizeHeader = true
       } else {
         this.minimizeHeader = false
+      }
+    },
+    displayHamburgerMenu() {
+      const width = window.innerWidth
+      if (width < 680) {
+        this.hamburgerMenu = true
+      } else {
+        this.hamburgerMenu = false
       }
     },
   },
