@@ -32,10 +32,7 @@ export default {
 <style lang="scss" scoped>
 @import '@design';
 .close {
-  position: fixed;
   z-index: 2;
-  right: 25px;
-  top: 25px;
   text-align: center;
   background: $light-blue;
   font-size: 20px;
@@ -50,6 +47,9 @@ export default {
   &::after {
     content: 'x';
     color: $dark-blue;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 </style>

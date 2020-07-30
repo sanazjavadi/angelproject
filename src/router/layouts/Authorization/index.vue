@@ -38,7 +38,9 @@ export default {
 <template>
   <modal>
     <template v-slot:close>
-      <BaseCloseButton @click="_toggleModal" />
+      <div class="close-area">
+        <BaseCloseButton @click="_toggleModal" />
+      </div>
     </template>
     <keep-alive>
       <component :is="changeComponent" />
@@ -48,4 +50,9 @@ export default {
 
 <style lang="scss" scoped>
 @import '@design';
+.close-area {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
 </style>
