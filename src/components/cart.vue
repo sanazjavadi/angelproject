@@ -1,8 +1,10 @@
 <script>
 import badge from '@components/badge.vue'
+import products from '@components/product-cart.vue'
 export default {
   components: {
     badge,
+    products,
   },
 }
 </script>
@@ -15,6 +17,16 @@ export default {
       <span class="text-center"> لیست آرزوها</span>
 
       <badge size="30" lineheight="25" class="mr-3" />
+    </div>
+
+    <div class="products-cart px-3">
+      <products />
+    </div>
+    <div class="general-price"> </div>
+    <div class="px-3 button-block">
+      <BaseButton size="block">
+        پرداخت
+      </BaseButton>
     </div>
   </div>
 </template>
@@ -32,6 +44,8 @@ export default {
   background-color: #fff;
   z-index: 2;
   border-left: 1px solid $light-gray;
+  display: flex;
+  flex-direction: column;
   .cart-title {
     border-bottom: 1px solid $light-blue;
     position: relative;
@@ -41,6 +55,13 @@ export default {
       font-weight: 700;
       font-size: 18px;
     }
+  }
+  .general-price {
+    align-self: flex-end;
+    width: 100%;
+    position: relative;
+  }
+  .button-block {
   }
 }
 </style>
