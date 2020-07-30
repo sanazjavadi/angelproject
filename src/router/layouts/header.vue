@@ -1,8 +1,8 @@
 <script>
 import hamburgerMenu from '@layouts/hamburger-menu.vue'
-
+import Basket from '@components/gift-basket.vue'
 export default {
-  components: { hamburgerMenu },
+  components: { hamburgerMenu, Basket },
   data() {
     return {
       items: [
@@ -85,6 +85,8 @@ export default {
     <!-- default navigation -->
 
     <div v-if="!hamburgerMenu" class="container-fluid ">
+      <Basket />
+
       <div class="row justify-content-center pt-3 pb-3">
         <div class="col-lg-4 d-flex justify-content-center">
           <BaseLogo />
