@@ -1,7 +1,13 @@
-import Cart from './cart'
+import CartLayout from './cart'
 
-describe('@components/cart', () => {
-  it('exports a valid component', () => {
-    expect(Cart).toBeAComponent()
+describe('@layouts/cart', () => {
+  it('renders its content', () => {
+    const slotContent = '<p>Hello!</p>'
+    const { element } = shallowMount(CartLayout, {
+      slots: {
+        default: slotContent,
+      },
+    })
+    expect(element.innerHTML).toContain(slotContent)
   })
 })

@@ -11,8 +11,9 @@ export default {}
     />
     <div class="info pl-3">
       <p class="name font-weight-bolder ">آرزوی ارشیا </p>
+
       <p class="details ">آرزو دارم یک ماشین کنترلی داشته باشم. </p>
-      <div class="input-area d-flex align-items-center mt-1">
+      <div class="input-area d-flex align-items-center mt-2">
         <baseInput placeholder="10,000" align="ltr" class="w-75" />
         <p class="price font-weight-bolder pl-2"> تومان</p>
       </div>

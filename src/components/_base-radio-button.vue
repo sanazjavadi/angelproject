@@ -1,11 +1,11 @@
 <script>
-export default {
-  
-}
+export default {}
 </script>
 
 <template>
-  <div/>
+  <div>
+    <input type="radio" />
+  </div>
 </template>
 
 <style lang="scss" module>

@@ -3,7 +3,7 @@
 import basket from '@components/svg/basket-svg.vue'
 
 // components
-import cart from '@layouts/cart/cart.vue'
+import cart from '@layouts/cart/mini-cart.vue'
 import badge from '@components/badge.vue'
 export default {
   components: { basket, cart, badge },
@@ -42,18 +42,20 @@ export default {
 @import '@design';
 /* Enter and leave animations can use different */
 /* durations and timing functions.              */
-.slide-fade-enter-active {
-  transition: all 0.3s ease;
-}
-.slide-fade-leave-active {
-  transition: all 0.8s cubic-bezier(1, 0.5, 0.8, 1);
-}
-.slide-fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active below version 2.1.8 */ {
-  transform: translateX(10px);
-  opacity: 0;
+.drop-enter-active,
+.drop-leave-active {
+  transition: transform 0.2s linear;
 }
 
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translate(-40vw);
+
+  .slide-fade-leave,
+  .slide-fade-enter-to {
+    transform: translate(0);
+  }
+}
 .basket {
   position: relative;
   top: 1.5rem;

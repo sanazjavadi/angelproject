@@ -1,38 +1,20 @@
-<script>
-import badge from '@components/badge.vue'
-import products from '@components/product-cart.vue'
-export default {
-  components: {
-    badge,
-    products,
-  },
-}
-</script>
-
 <template>
-  <div class="cart-area">
-    <div class="cart-title d-flex align-items-center justify-content-between">
-      <baseCloseButton class="ml-3" />
-
-      <span class="text-center"> لیست آرزوها</span>
-
-      <badge size="30" lineheight="25" class="mr-3" />
+  <div class="cart">
+    <div class="header-cart">
+      <ul>
+        <li>
+          نحوه برآورده کردن آرزو
+        </li>
+        <li>
+          تکمیل اطلاعات
+        </li>
+      </ul>
     </div>
 
-    <div class="products-cart px-3">
-      <products />
-    </div>
-    <div class="footer-cart">
-      <div
-        class="general-price d-flex align-items-center justify-content-between mx-3 py-3 my-3"
-      >
-        <p class="m-0">مبلغ کل</p>
-        <span class="font-weight-bolder">۷/۷۰۰ تومان</span>
-      </div>
-      <div class="px-3 button-block">
-        <BaseButton size="block">
-          پرداخت
-        </BaseButton>
+    <div class="body-cart mx-5 my-4 p-3">
+      <div class="d-flex flex-column justify-content-between">
+        <p>میخوام هزینه آرزو رو پرداخت کنم</p>
+        <p>میخوام کالای آرزو رو تهیه کنم</p>
       </div>
     </div>
   </div>
@@ -40,46 +22,48 @@ export default {
 
 <style lang="scss" scoped>
 @import '@design';
-
-.cart-area {
+.cart {
   position: fixed;
-  right: 0;
   top: 0;
-  min-height: 100%;
-  width: 100%;
-  max-width: 475px;
-  background-color: #fff;
+  right: 475px;
+  width: 60vw;
+  height: 100vh;
+  background-color: white;
   z-index: 2;
   border-left: 1px solid $light-gray;
   display: flex;
   flex-direction: column;
-
-  .cart-title {
+  .header-cart {
     border-bottom: 1px solid $light-blue;
     position: relative;
     height: 60px;
-    span {
-      color: $dark-blue;
-      font-weight: 700;
+    background: $dark-blue;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       font-size: 18px;
-    }
-  }
-  .footer-cart {
-    .general-price {
-      color: $dark-gray;
-      border-width: 2px 0px;
-      border-style: solid;
-      border-color: $light-blue;
-      span {
-        font-size: 18px;
+      li {
+        &:first-child {
+          padding-left: 5rem;
+        }
+        &:last-child {
+          padding-right: 5rem;
+        }
       }
     }
   }
 
-  .products-cart {
+  .body-cart {
+    border: 1px solid $yellow;
+    border-radius: 5px;
     position: relative;
-    height: 72vh;
-    scroll: auto;
+    height: 70vh;
   }
 }
 </style>
