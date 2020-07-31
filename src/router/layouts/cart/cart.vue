@@ -22,11 +22,18 @@ export default {
     <div class="products-cart px-3">
       <products />
     </div>
-    <div class="general-price"> </div>
-    <div class="px-3 button-block">
-      <BaseButton size="block">
-        پرداخت
-      </BaseButton>
+    <div class="footer-cart">
+      <div
+        class="general-price d-flex align-items-center justify-content-between mx-3 py-3 my-3"
+      >
+        <p class="m-0">مبلغ کل</p>
+        <span class="font-weight-bolder">۷/۷۰۰ تومان</span>
+      </div>
+      <div class="px-3 button-block">
+        <BaseButton size="block">
+          پرداخت
+        </BaseButton>
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +53,7 @@ export default {
   border-left: 1px solid $light-gray;
   display: flex;
   flex-direction: column;
+
   .cart-title {
     border-bottom: 1px solid $light-blue;
     position: relative;
@@ -56,12 +64,22 @@ export default {
       font-size: 18px;
     }
   }
-  .general-price {
-    align-self: flex-end;
-    width: 100%;
-    position: relative;
+  .footer-cart {
+    .general-price {
+      color: $dark-gray;
+      border-width: 2px 0px;
+      border-style: solid;
+      border-color: $light-blue;
+      span {
+        font-size: 18px;
+      }
+    }
   }
-  .button-block {
+
+  .products-cart {
+    position: relative;
+    height: 72vh;
+    scroll: auto;
   }
 }
 </style>

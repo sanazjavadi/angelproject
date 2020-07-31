@@ -3,7 +3,7 @@
 import basket from '@components/svg/basket-svg.vue'
 
 // components
-import cart from '@components/cart.vue'
+import cart from '@layouts/cart/cart.vue'
 import badge from '@components/badge.vue'
 export default {
   components: { basket, cart, badge },
