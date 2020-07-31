@@ -12,7 +12,10 @@ export default {}
     <div class="info pl-3">
       <p class="name font-weight-bolder ">آرزوی ارشیا </p>
       <p class="details ">آرزو دارم یک ماشین کنترلی داشته باشم. </p>
-      <p class="price font-weight-bolder ">10,000 تومان</p>
+      <div class="input-area d-flex align-items-center mt-1">
+        <baseInput placeholder="10,000" align="ltr" class="w-75" />
+        <p class="price font-weight-bolder pl-2"> تومان</p>
+      </div>
     </div>
     <i class="fa fa-trash align-self-start" aria-hidden="true"> </i>
   </div>
@@ -35,6 +38,9 @@ export default {}
     width: 85%;
     p {
       margin: 0;
+    }
+    .input-area {
+      width: 50%;
     }
   }
 }

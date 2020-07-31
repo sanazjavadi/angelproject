@@ -7,7 +7,7 @@ export default {
       default: 'text',
       description: 'Input type',
       validator: (v) => {
-        return ['text', 'password', 'file', 'email'].includes(v)
+        return ['text', 'password', 'file', 'email', 'number'].includes(v)
       },
     },
     value: {
@@ -137,6 +137,7 @@ export default {
     border: $size-input-border solid darken($input-border-color, 20px);
   }
 }
+
 .isvalid {
   border-color: $input-valid-color;
   &:focus {
