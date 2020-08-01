@@ -48,6 +48,11 @@ export default {
       default: null,
       description: 'Input icon',
     },
+    size: {
+      type: String,
+      default: null,
+      description: 'Input size',
+    },
   },
   data() {
     return {
@@ -102,7 +107,10 @@ export default {
       :value="value"
       :placeholder="placeholder"
       v-bind="$attrs"
-      :class="['form-control', computedStateClass]"
+      :class="[
+        size ? `form-control-${size}` : 'form-control',
+        computedStateClass,
+      ]"
       :dir="[align ? 'ltr' : 'rtl']"
       @input="getValue($event.target.value)"
     />
@@ -134,10 +142,31 @@ export default {
   transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06),
     border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
   &:focus {
+    outline: none;
+    appearance: none;
     border: $size-input-border solid darken($input-border-color, 20px);
   }
 }
-
+.form-control-sm {
+  padding: $size-input-padding-vertical/2 $size-input-padding-horizontal/2;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  width: 8rem;
+  color: $input-font-color;
+  background-color: #fff;
+  border: $size-input-border solid $input-border-color;
+  font-weight: $input-font-weight;
+  will-change: border-color, box-shadow;
+  border-radius: $size-input-border-radius;
+  box-shadow: none;
+  transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06),
+    border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
+  &:focus {
+    outline: none;
+    appearance: none;
+    border: $size-input-border solid darken($input-border-color, 20px);
+  }
+}
 .isvalid {
   border-color: $input-valid-color;
   &:focus {

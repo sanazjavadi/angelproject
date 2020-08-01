@@ -3,19 +3,23 @@
     <div class="header-cart">
       <ul>
         <li>
-          نحوه برآورده کردن آرزو
+          نحوه پرداخت
         </li>
         <li>
-          تکمیل اطلاعات
+          اتصال به درگاه بانک
         </li>
       </ul>
     </div>
 
     <div class="body-cart mx-5 my-4 p-3">
-      <div class="d-flex flex-column justify-content-between">
-        <p>میخوام هزینه آرزو رو پرداخت کنم</p>
-        <p>میخوام کالای آرزو رو تهیه کنم</p>
-      </div>
+      <div class="payment-method-first"> پی پینگ</div>
+      <div class="peyment-method-second mt-3">بانک پارسیان</div>
+    </div>
+
+    <div class="footer-cart m-auto">
+      <baseButton>
+        صفحه پرداخت
+      </baseButton>
     </div>
   </div>
 </template>
@@ -26,7 +30,7 @@
   position: fixed;
   top: 0;
   right: 475px;
-  width: 60vw;
+  width: 50vw;
   height: 100vh;
   background-color: white;
   z-index: 2;
@@ -60,10 +64,33 @@
   }
 
   .body-cart {
-    border: 1px solid $yellow;
-    border-radius: 5px;
-    position: relative;
-    height: 70vh;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .payment-method-first {
+      background-color: #fff;
+      text-align: center;
+      width: 250px;
+      padding: 3rem;
+      border: 1px solid $light-gray;
+      color: $dark-blue;
+      font-weight: 900;
+      font-size: 20px;
+      border-radius: 5px;
+    }
+    .peyment-method-second {
+      background-color: #fff;
+      text-align: center;
+      width: 250px;
+      padding: 3rem;
+      border: 1px solid $light-gray;
+      color: $dark-blue;
+      font-weight: 900;
+      font-size: 20px;
+      border-radius: 5px;
+    }
   }
 }
 </style>

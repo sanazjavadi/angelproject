@@ -35,7 +35,7 @@ export default {
           class="general-price d-flex align-items-center justify-content-between mx-3 py-3 my-3"
         >
           <p class="m-0">مبلغ کل</p>
-          <span class="font-weight-bolder">۷/۷۰۰ تومان</span>
+          <span class="font-weight-bolder"> ۰ تومان </span>
         </div>
         <div class="px-3 button-block">
           <BaseButton size="block" @click="isCartOpen = true">

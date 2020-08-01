@@ -10,15 +10,20 @@ export default {}
       class="img-fluid"
     />
     <div class="info pl-3">
-      <p class="name font-weight-bolder ">آرزوی ارشیا </p>
+      <div class="w-100 d-flex justify-content-between">
+        <p class="name font-weight-bolder ">آرزوی ارشیا </p>
+        <i class="fa fa-trash align-self-start" aria-hidden="true"> </i>
+      </div>
 
-      <p class="details ">آرزو دارم یک ماشین کنترلی داشته باشم. </p>
-      <div class="input-area d-flex align-items-center mt-2">
-        <baseInput placeholder="10,000" align="ltr" class="w-75" />
-        <p class="price font-weight-bolder pl-2"> تومان</p>
+      <p class="details mt-1">آرزو دارم یک ماشین کنترلی داشته باشم. </p>
+      <div class="w-100 d-flex justify-content-between align-items-center">
+        <p>مقدار دلخواه خود را وارد کنید</p>
+        <div class="d-flex align-items-center  mt-2 ">
+          <baseInput placeholder="0,00" align="ltr" size="sm" />
+          <!-- <p class="price font-weight-bolder pl-2 m-0"> تومان</p> -->
+        </div>
       </div>
     </div>
-    <i class="fa fa-trash align-self-start" aria-hidden="true"> </i>
   </div>
 </template>
 
@@ -34,14 +39,16 @@ export default {}
   }
   .info {
     text-align: right;
-    color: $dark-gray;
     font-size: 12px;
-    width: 85%;
+    width: 100%;
     p {
       margin: 0;
+      color: $dark-blue;
+      font-weight: 500;
     }
-    .input-area {
-      width: 50%;
+    .name {
+      font-size: 14px;
+      color: $dark-gray;
     }
   }
 }
