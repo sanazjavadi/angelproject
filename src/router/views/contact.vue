@@ -1,11 +1,16 @@
 <script>
 import hero from '@layouts/hero.vue'
+// svg
+import call from '@components/svg/call-svg.vue'
+import location from '@components/svg/location-svg.vue'
+import email from '@components/svg/email-svg.vue'
+
 export default {
   page: {
     title: 'Contact',
     meta: [{ name: 'description', content: 'The Contact page.' }],
   },
-  components: { hero },
+  components: { hero, call, location, email },
 }
 </script>
 
@@ -18,7 +23,7 @@ export default {
       <div class="container-fluid">
         <div class="row justify-content-center ">
           <div
-            class="col-lg-6 contact-form d-flex flex-column align-items-center"
+            class="col-lg-6 col-md-8 col-sm-11 col-12 contact-form d-flex flex-column align-items-center"
           >
             <h2 class="text-center">
               ارسال پیام از طریق فرم
@@ -39,21 +44,38 @@ export default {
             </div>
           </div>
           <div
-            class="col-lg-6 address d-flex flex-column justify-content-center"
+            class="col-lg-6 col-md-6 col-10 mt-5 mt-lg-0 address d-flex flex-column justify-content-center"
           >
-            <h2>آدرس</h2>
+            <div class="d-flex  align-items-center">
+              <location />
+              <h2 class=" pl-2">آدرس</h2>
+            </div>
+
             <p>
               تهران، میدان توحید، خیابان پرچم، بین رودکی و خوش، کوچه نیکوئی،
               پلاک ۳ شعبه گیلان: رشت، بلوار شهید انصاری، خیابان ارشاد، میدان باب
               الحوائج، ساختمان سبحان
             </p>
-            <h2>تلفن</h2>
-            <p>
-              61604 – 021 شماره بازرسی: 09199167212 شعبه گیلان: 34244-013
+
+            <div class="d-flex  align-items-center">
+              <call />
+              <h2 class=" pl-2"> تلفن</h2>
+            </div>
+
+            <p class="font-weight-bolder">
+              <a href="tel:021-1414">
+                021-1414
+              </a>
             </p>
-            <h2>ایمیل</h2>
-            <p>
-              info@angell.com
+            <div class="d-flex align-items-center ">
+              <email />
+              <h2 class=" pl-2">ایمیل</h2>
+            </div>
+
+            <p class="font-weight-bolder">
+              <a href="mailto:info@angell.com">
+                info@angell.com
+              </a>
             </p>
           </div>
         </div>
@@ -79,12 +101,14 @@ export default {
     h2 {
       @extend %font-heading;
       color: $dark-blue;
-      text-align: center;
+      text-align: right;
+      padding-bottom: 0;
+      margin: 0;
     }
     p {
       @extend %font-content;
       color: $dark-gray;
-      text-align: center;
+      text-align: right;
       font-size: 14px;
     }
   }
