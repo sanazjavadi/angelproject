@@ -34,6 +34,12 @@ export default {
                   <BaseInput placeholder="نام شما" />
                   <BaseInput placeholder="ایمیل شما" class="mt-2" />
                   <BaseInput placeholder="موضوع" class="mt-2" />
+                  <textarea
+                    placeholder="پیام"
+                    rows="4"
+                    class="form-control mt-2"
+                  >
+                  </textarea>
                 </template>
                 <template v-slot:footer>
                   <baseButton class="mt-3">
@@ -111,6 +117,25 @@ export default {
       text-align: right;
       font-size: 14px;
     }
+  }
+}
+.form-control {
+  padding: $size-input-padding;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  color: $input-font-color;
+  background-color: #fff;
+  border: $size-input-border solid $input-border-color;
+  font-weight: $input-font-weight;
+  will-change: border-color, box-shadow;
+  border-radius: $size-input-border-radius;
+  box-shadow: none;
+  transition: box-shadow 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06),
+    border 0.25s cubic-bezier(0.27, 0.01, 0.38, 1.06);
+  &:focus {
+    outline: none;
+    appearance: none;
+    border: $size-input-border solid darken($input-border-color, 20px);
   }
 }
 </style>

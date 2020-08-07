@@ -25,7 +25,7 @@ export default {
         },
         {
           title: 'حمایت شما',
-          link: '',
+          link: 'your-support',
         },
       ],
       selected: 'home',
