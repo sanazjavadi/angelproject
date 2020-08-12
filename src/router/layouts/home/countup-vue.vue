@@ -5,8 +5,9 @@ export default {
       count: 0,
     }
   },
+  computed: {},
   mounted() {
-    setTimeout(this.countUp(0, 400, 2000), -100000)
+    setTimeout(this.countUp(0, 900, 2000), -100000)
   },
   methods: {
     countUp(start, end, duration) {
@@ -35,9 +36,9 @@ export default {
           تا الان
         </h2>
         <div class="counts">
-          <span>0</span>
-          <span>0</span>
-          <span>4</span>
+          <span>{{ count.toString()[2] }}</span>
+          <span>{{ count.toString()[1] }}</span>
+          <span>{{ count.toString()[0] }}</span>
         </div>
 
         <h2 class="pt-4">
